@@ -92,29 +92,29 @@ const Testimonials = () => {
         </div>
 
         {/* Avatars Row */}
-        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8">
+        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 px-4">
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+            className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
           </button>
 
           {/* Avatars */}
-          <div className="flex items-center gap-3 md:gap-4">
+          <div className="flex items-center gap-2 md:gap-4 overflow-x-auto scrollbar-hide">
             {testimonials.map((testimonial, index) => (
               <button
                 key={testimonial.name}
                 onClick={() => setActiveIndex(index)}
-                className={`relative transition-all duration-300 ${
+                className={`relative flex-shrink-0 transition-all duration-300 ${
                   index === activeIndex
                     ? "scale-110 z-10"
                     : "scale-100 opacity-70 hover:opacity-100"
                 }`}
               >
                 <div
-                  className={`w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-4 transition-all duration-300 ${
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-3 md:border-4 transition-all duration-300 ${
                     index === activeIndex
                       ? "border-brand-500 shadow-lg shadow-brand-500/30"
                       : "border-transparent"
@@ -133,9 +133,9 @@ const Testimonials = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+            className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
           </button>
         </div>
 
