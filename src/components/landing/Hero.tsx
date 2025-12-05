@@ -62,12 +62,12 @@ const Hero = () => {
 
         {/* Phone Mockup Section with Floating Cards */}
         <div className="relative flex justify-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          <div className="relative max-w-[900px] w-full">
+          <div className="relative max-w-[900px] w-full flex justify-center">
             
-            {/* Floating Notification Cards - Left Side */}
+            {/* Floating Notification Cards - Left Side - Hidden on mobile */}
             
             {/* Card 1 - Points/Rewards */}
-            <div className="absolute left-0 md:left-[5%] top-[5%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300 max-w-[200px]" style={{ animationDelay: "0.8s" }}>
+            <div className="hidden md:block absolute left-[5%] lg:left-[8%] top-[5%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300 max-w-[200px]" style={{ animationDelay: "0.8s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center shadow-inner">
                   <Trophy className="w-6 h-6 text-amber-600" />
@@ -80,7 +80,7 @@ const Hero = () => {
             </div>
 
             {/* Card 2 - Location */}
-            <div className="absolute left-0 md:left-[2%] top-[35%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.1s" }}>
+            <div className="hidden md:block absolute left-[2%] lg:left-[5%] top-[35%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.1s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-gradient-to-br from-brand-100 to-brand-200 rounded-xl flex items-center justify-center shadow-inner">
                   <MapPin className="w-5 h-5 text-brand-600" />
@@ -93,7 +93,7 @@ const Hero = () => {
             </div>
 
             {/* Card 3 - Time/Schedule */}
-            <div className="absolute left-[5%] md:left-[8%] bottom-[15%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.4s" }}>
+            <div className="hidden lg:block absolute left-[8%] bottom-[15%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.4s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center shadow-inner">
                   <Clock className="w-5 h-5 text-purple-600" />
@@ -105,10 +105,10 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Floating Notification Cards - Right Side */}
+            {/* Floating Notification Cards - Right Side - Hidden on mobile */}
             
             {/* Card 4 - Reservation */}
-            <div className="absolute right-0 md:right-[5%] top-[8%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
+            <div className="hidden md:block absolute right-[5%] lg:right-[8%] top-[8%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center shadow-inner">
                   <Calendar className="w-6 h-6 text-green-600" />
@@ -121,7 +121,7 @@ const Hero = () => {
             </div>
 
             {/* Card 5 - Notification/Offer */}
-            <div className="absolute right-0 md:right-[2%] top-[38%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300 max-w-[180px]" style={{ animationDelay: "1.2s" }}>
+            <div className="hidden md:block absolute right-[2%] lg:right-[5%] top-[38%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300 max-w-[180px]" style={{ animationDelay: "1.2s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center shadow-inner">
                   <Bell className="w-5 h-5 text-red-500" />
@@ -134,7 +134,7 @@ const Hero = () => {
             </div>
 
             {/* Card 6 - Favorite */}
-            <div className="absolute right-[5%] md:right-[8%] bottom-[12%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
+            <div className="hidden lg:block absolute right-[8%] bottom-[12%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl flex items-center justify-center shadow-inner">
                   <Heart className="w-5 h-5 text-pink-500 fill-pink-500" />
@@ -146,34 +146,27 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Small floating icon bubbles */}
-            <div className="absolute left-[15%] top-[60%] w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center animate-float-fast z-10 border border-brand-100/50" style={{ animationDelay: "0.3s" }}>
+            {/* Small floating icon bubbles - Hidden on mobile */}
+            <div className="hidden md:flex absolute left-[15%] top-[60%] w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center animate-float-fast z-10 border border-brand-100/50" style={{ animationDelay: "0.3s" }}>
               <Utensils className="w-5 h-5 text-brand-500" />
             </div>
-            <div className="absolute right-[12%] top-[55%] w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center animate-float z-10 border border-brand-100/50" style={{ animationDelay: "1.8s" }}>
+            <div className="hidden md:flex absolute right-[12%] top-[55%] w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center animate-float z-10 border border-brand-100/50" style={{ animationDelay: "1.8s" }}>
               <Coffee className="w-5 h-5 text-brand-500" />
             </div>
-            <div className="absolute left-[20%] bottom-[5%] w-9 h-9 bg-white rounded-full shadow-lg flex items-center justify-center animate-float-slow z-10 border border-brand-100/50" style={{ animationDelay: "0.8s" }}>
+            <div className="hidden lg:flex absolute left-[20%] bottom-[5%] w-9 h-9 bg-white rounded-full shadow-lg items-center justify-center animate-float-slow z-10 border border-brand-100/50" style={{ animationDelay: "0.8s" }}>
               <Users className="w-4 h-4 text-brand-500" />
             </div>
 
             {/* Glow effect behind phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[550px] bg-gradient-to-br from-brand-400/20 to-brand-600/10 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[350px] h-[500px] md:h-[600px] bg-gradient-to-br from-brand-400/20 to-brand-600/10 rounded-full blur-3xl" />
 
-            {/* Phone Frame - Centered */}
-            <div className="relative w-[260px] md:w-[280px] mx-auto bg-gray-900 rounded-[3rem] p-2 shadow-2xl shadow-brand-900/30 transform hover:scale-[1.02] transition-transform duration-500 z-10">
-              {/* Phone notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-2xl z-20" />
-              {/* Screen */}
-              <div className="rounded-[2.5rem] overflow-hidden bg-white">
-                <img
-                  src={appMockup}
-                  alt="Ondir App - Lista de restaurantes"
-                  className="w-full h-auto"
-                />
-              </div>
-              {/* Home indicator */}
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-gray-700 rounded-full" />
+            {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
+            <div className="relative w-[280px] md:w-[320px] lg:w-[360px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+              <img
+                src={appMockup}
+                alt="Ondir App - Lista de restaurantes"
+                className="w-full h-auto drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
