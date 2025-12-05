@@ -1,5 +1,5 @@
 import { Download, Search, Trophy, Ticket, ArrowRight } from "lucide-react";
-import appMockup from "@/assets/app-mockup.png";
+import appMockup from "@/assets/app-howitworks.png";
 
 const steps = [
   {
@@ -70,8 +70,8 @@ const HowItWorks = () => {
                 className="relative z-10 w-[280px] md:w-[320px] drop-shadow-2xl"
               />
 
-              {/* Floating elements */}
-              <div className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-xl p-3 animate-float hidden md:flex items-center gap-2">
+              {/* Floating elements - in front of phone */}
+              <div className="absolute -left-4 top-1/4 z-20 bg-white rounded-xl shadow-xl p-3 animate-float hidden md:flex items-center gap-2">
                 <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
                   <Trophy className="w-4 h-4 text-white" />
                 </div>
@@ -81,7 +81,7 @@ const HowItWorks = () => {
                 </div>
               </div>
 
-              <div className="absolute -right-4 top-1/2 bg-white rounded-xl shadow-xl p-3 animate-float-slow hidden md:flex items-center gap-2">
+              <div className="absolute -right-4 top-1/2 z-20 bg-white rounded-xl shadow-xl p-3 animate-float-slow hidden md:flex items-center gap-2">
                 <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
                   <Ticket className="w-4 h-4 text-white" />
                 </div>
