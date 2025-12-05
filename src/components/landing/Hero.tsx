@@ -1,59 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { Apple, PlayCircle, MapPin, Star, Calendar, Heart, Bell, Utensils, Coffee, Clock, Users, Trophy } from "lucide-react";
 import appMockup from "@/assets/app-mockup.png";
+import heroBg from "@/assets/hero-bg.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-brand-50 via-white to-brand-100 overflow-hidden">
-      {/* Animated Background Elements */}
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Blue Background with Concentric Circles */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBg} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        {/* Additional subtle overlays for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-600/20" />
+      </div>
+      
+      {/* Animated floating elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Large gradient orbs */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--brand-200)/0.5),transparent)]" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-to-tl from-brand-100/60 to-transparent rounded-full blur-3xl" />
-        
-        {/* Blue blob shapes inspired by reference */}
-        <div className="absolute top-[20%] right-[5%] w-[400px] h-[400px] bg-brand-500/10 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute bottom-[20%] left-[5%] w-[300px] h-[300px] bg-brand-400/15 rounded-full blur-2xl animate-float" style={{ animationDelay: "2s" }} />
-        
-        {/* Decorative dots pattern */}
-        <div className="absolute top-[15%] left-[8%] w-3 h-3 bg-brand-400/60 rounded-full animate-pulse-soft" />
-        <div className="absolute top-[25%] right-[12%] w-2 h-2 bg-brand-500/50 rounded-full animate-float-fast" style={{ animationDelay: "0.5s" }} />
-        <div className="absolute bottom-[35%] left-[12%] w-4 h-4 bg-brand-300/50 rounded-full animate-float-slow" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-[50%] right-[5%] w-2 h-2 bg-brand-600/40 rounded-full animate-float" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute bottom-[45%] right-[15%] w-3 h-3 bg-brand-400/50 rounded-full animate-pulse-soft" style={{ animationDelay: "2s" }} />
-        
-        {/* Decorative circles/rings */}
-        <div className="absolute top-[30%] left-[3%] w-20 h-20 border-2 border-brand-200/40 rounded-full" />
-        <div className="absolute bottom-[25%] right-[3%] w-16 h-16 border border-brand-300/30 rounded-full" />
+        <div className="absolute top-[20%] right-[10%] w-3 h-3 bg-white/30 rounded-full animate-pulse-soft" />
+        <div className="absolute top-[40%] left-[8%] w-2 h-2 bg-white/20 rounded-full animate-float" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-white/15 rounded-full animate-float-slow" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container relative pt-28 pb-16 md:pt-36 md:pb-24">
         {/* Hero Content - Centered */}
         <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-700 text-sm font-semibold mb-6 animate-fade-up border border-brand-200/50">
-            <Star className="w-4 h-4 fill-brand-500 text-brand-500" />
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6 animate-fade-up border border-white/20">
+            <Star className="w-4 h-4 fill-white text-white" />
             <span>+10.000 usuários satisfeitos</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Planeje, Descubra e{" "}
             <span className="relative inline-block">
-              <span className="text-gradient">Economize</span>
+              <span className="text-white">Economize</span>
             </span>
             {" "}com o Ondir
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
             Encontre os melhores restaurantes, bares e eventos. Faça reservas, acumule pontos e ganhe recompensas exclusivas.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="gap-3 shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all duration-300 hover:-translate-y-1 px-8">
+            <Button size="lg" className="gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 px-8">
               <Apple className="w-5 h-5" />
               App Store
             </Button>
-            <Button variant="outline" size="lg" className="gap-3 border-2 border-brand-200 text-brand-700 hover:bg-brand-50 hover:border-brand-300 transition-all duration-300 hover:-translate-y-1 px-8">
+            <Button variant="outline" size="lg" className="gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 px-8">
               <PlayCircle className="w-5 h-5" />
               Google Play
             </Button>
@@ -158,7 +155,7 @@ const Hero = () => {
             </div>
 
             {/* Glow effect behind phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[350px] h-[500px] md:h-[600px] bg-gradient-to-br from-brand-400/20 to-brand-600/10 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[350px] h-[500px] md:h-[600px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
 
             {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
             <div className="relative w-[320px] md:w-[380px] lg:w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
@@ -173,21 +170,21 @@ const Hero = () => {
 
         {/* Stats Bar */}
         <div className="flex flex-wrap gap-6 md:gap-12 justify-center mt-12 md:mt-16 animate-fade-up" style={{ animationDelay: "0.6s" }}>
-          <div className="text-center px-6 py-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-brand-100/50 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-brand-600">500+</p>
-            <p className="text-sm text-gray-500 font-medium">Estabelecimentos</p>
+          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-3xl md:text-4xl font-bold text-white">500+</p>
+            <p className="text-sm text-white/70 font-medium">Estabelecimentos</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-brand-100/50 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-brand-600">10k+</p>
-            <p className="text-sm text-gray-500 font-medium">Downloads</p>
+          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-3xl md:text-4xl font-bold text-white">10k+</p>
+            <p className="text-sm text-white/70 font-medium">Downloads</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-brand-100/50 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-brand-600">4.9</p>
-            <p className="text-sm text-gray-500 font-medium">Avaliação</p>
+          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-3xl md:text-4xl font-bold text-white">4.9</p>
+            <p className="text-sm text-white/70 font-medium">Avaliação</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-brand-100/50 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-brand-600">50k+</p>
-            <p className="text-sm text-gray-500 font-medium">Reservas</p>
+          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-3xl md:text-4xl font-bold text-white">50k+</p>
+            <p className="text-sm text-white/70 font-medium">Reservas</p>
           </div>
         </div>
       </div>
