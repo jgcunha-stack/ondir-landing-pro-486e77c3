@@ -2,8 +2,14 @@ import { Apple, PlayCircle } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-8 md:py-12 bg-gray-900">
-      <div className="container">
+    <section className="relative">
+      {/* Split background - 50% white, 50% dark */}
+      <div className="absolute inset-0">
+        <div className="h-1/2 bg-white" />
+        <div className="h-1/2 bg-gray-900" />
+      </div>
+
+      <div className="container relative z-10 py-8 md:py-12">
         <div className="relative bg-brand-500 rounded-3xl py-12 md:py-16 px-6 md:px-12 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
