@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -44,6 +44,17 @@ const testimonials = [
   },
 ];
 
+const marqueeItems = [
+  "São Paulo",
+  "Rio de Janeiro", 
+  "Belo Horizonte",
+  "Curitiba",
+  "Porto Alegre",
+  "Brasília",
+  "Salvador",
+  "Fortaleza",
+];
+
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(2);
 
@@ -57,7 +68,19 @@ const Testimonials = () => {
 
   return (
     <section className="relative py-16 md:py-24 bg-white overflow-hidden">
-      <div className="container relative z-10">
+      {/* Diagonal Green Banner */}
+      <div className="absolute top-0 left-0 right-0 h-12 bg-brand-500 -rotate-1 -translate-y-2 scale-110 overflow-hidden">
+        <div className="animate-marquee flex items-center h-full whitespace-nowrap">
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
+            <span key={index} className="inline-flex items-center gap-2 mx-6 text-white font-semibold">
+              {item}
+              <ArrowUpRight className="w-4 h-4" />
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="container relative z-10 pt-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4">
