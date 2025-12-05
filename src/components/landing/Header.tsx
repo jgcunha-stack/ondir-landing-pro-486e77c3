@@ -27,8 +27,8 @@ const Header = () => {
       <div
         className={`container max-w-5xl mx-auto transition-all duration-300 rounded-full px-4 md:px-6 py-3 border ${
           isScrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-lg border-brand-100"
-            : "bg-brand-50/60 backdrop-blur-md border-brand-100/50"
+            ? "bg-white/90 backdrop-blur-xl shadow-lg border-white/50"
+            : "bg-white/70 backdrop-blur-md border-white/30"
         }`}
       >
         <div className="flex items-center justify-between">
