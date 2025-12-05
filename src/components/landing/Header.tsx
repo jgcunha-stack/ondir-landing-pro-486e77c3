@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoBlue from "@/assets/logo-blue.png";
+import logoWhite from "@/assets/logo-white.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,13 +29,13 @@ const Header = () => {
         className={`container max-w-5xl mx-auto transition-all duration-300 rounded-full px-4 md:px-6 py-3 border ${
           isScrolled
             ? "bg-white/90 backdrop-blur-xl shadow-lg border-white/50"
-            : "bg-white/70 backdrop-blur-md border-white/30"
+            : "bg-white/20 backdrop-blur-md border-white/30"
         }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <img src={logoBlue} alt="Ondir" className="h-8" />
+            <img src={isScrolled ? logoBlue : logoWhite} alt="Ondir" className="h-8 transition-all duration-300" />
           </a>
 
           {/* Desktop Navigation */}
@@ -44,9 +45,11 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
-                  index === 0
-                    ? "text-brand-600"
-                    : "text-gray-600 hover:text-brand-600"
+                  isScrolled
+                    ? index === 0
+                      ? "text-brand-600"
+                      : "text-gray-600 hover:text-brand-600"
+                    : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -56,14 +59,18 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-brand-500 hover:bg-brand-600 text-white rounded-full px-6 shadow-md shadow-brand-500/20">
+            <Button className={`rounded-full px-6 shadow-md transition-all duration-300 ${
+              isScrolled 
+                ? "bg-brand-500 hover:bg-brand-600 text-white shadow-brand-500/20"
+                : "bg-white text-brand-500 hover:bg-white/90 shadow-white/20"
+            }`}>
               Baixar App
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-700"
+            className={`md:hidden p-2 transition-colors ${isScrolled ? "text-gray-700" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
