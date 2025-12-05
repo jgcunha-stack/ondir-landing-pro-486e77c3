@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     name: "Rafael Santos",
-    role: "Usuário Premium",
+    role: "Usuário Ativo",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     content:
       "Adoro a função de cronograma! Planejo todas as saídas com meus amigos pelo app. Super prático e fácil de usar.",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: "Julia Mendes",
-    role: "Usuária desde 2023",
+    role: "Usuária Frequente",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     content:
       "As ofertas exclusivas são incríveis. Já economizei muito dinheiro com os cupons do Ondir! Recomendo a todos.",
@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     name: "Ana Beatriz",
-    role: "Usuária Premium",
+    role: "Usuária Satisfeita",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
     content:
       "O melhor app para encontrar promoções e lugares novos na cidade. Interface linda e super intuitiva!",
