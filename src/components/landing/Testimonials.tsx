@@ -101,33 +101,39 @@ const Testimonials = () => {
             <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
           </button>
 
-          {/* Avatars */}
-          <div className="flex items-center gap-2 md:gap-4 overflow-x-auto scrollbar-hide">
-            {testimonials.map((testimonial, index) => (
-              <button
-                key={testimonial.name}
-                onClick={() => setActiveIndex(index)}
-                className={`relative flex-shrink-0 transition-all duration-300 ${
-                  index === activeIndex
-                    ? "scale-110 z-10"
-                    : "scale-100 opacity-70 hover:opacity-100"
-                }`}
-              >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-3 md:border-4 transition-all duration-300 ${
+          {/* Avatars - Show all on desktop, only nearby on mobile */}
+          <div className="flex items-center gap-2 md:gap-4">
+            {testimonials.map((testimonial, index) => {
+              // On mobile, only show 2 avatars around the active one
+              const distance = Math.abs(index - activeIndex);
+              const isVisible = distance <= 1 || (activeIndex === 0 && index === testimonials.length - 1) || (activeIndex === testimonials.length - 1 && index === 0);
+              
+              return (
+                <button
+                  key={testimonial.name}
+                  onClick={() => setActiveIndex(index)}
+                  className={`relative flex-shrink-0 transition-all duration-300 ${
                     index === activeIndex
-                      ? "border-brand-500 shadow-lg shadow-brand-500/30"
-                      : "border-transparent"
-                  }`}
+                      ? "scale-110 z-10"
+                      : "scale-100 opacity-70 hover:opacity-100"
+                  } ${isVisible ? "flex" : "hidden md:flex"}`}
                 >
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </button>
-            ))}
+                  <div
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-3 md:border-4 transition-all duration-300 ${
+                      index === activeIndex
+                        ? "border-brand-500 shadow-lg shadow-brand-500/30"
+                        : "border-transparent"
+                    }`}
+                  >
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </button>
+              );
+            })}
           </div>
 
           {/* Right Arrow */}
