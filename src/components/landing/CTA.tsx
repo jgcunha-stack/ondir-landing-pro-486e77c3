@@ -14,7 +14,7 @@ const CTA = () => {
       </div>
 
       <div className="container relative z-10 py-8 md:py-12">
-        <div className="relative rounded-3xl py-8 md:py-12 px-6 md:px-12">
+        <div className="relative rounded-3xl py-8 md:py-12 px-6 md:px-12 overflow-hidden">
           {/* Background with hero image */}
           <div className="absolute inset-0 rounded-3xl overflow-hidden">
             <img 
