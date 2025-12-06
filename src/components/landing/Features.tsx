@@ -118,32 +118,28 @@ const Features = () => {
                     key={benefit.id}
                     className="flex-shrink-0 w-full"
                   >
-                    {/* Coupon Card */}
-                    <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                      {/* Coupon top part */}
-                      <div className={`${benefit.color} p-5 text-white relative`}>
-                        {/* Decorative circles for coupon effect */}
-                        <div className="absolute -left-2.5 bottom-0 w-5 h-5 bg-background rounded-full"></div>
-                        <div className="absolute -right-2.5 bottom-0 w-5 h-5 bg-background rounded-full"></div>
-                        
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
-                            <benefit.icon className="w-6 h-6 text-white" />
+                    {/* Coupon Card - New Design */}
+                    <div className="relative bg-white rounded-3xl shadow-xl border border-brand-100 overflow-hidden">
+                      {/* Top colored section */}
+                      <div className="bg-brand-500 p-5 pb-6 relative">
+                        <div className="flex items-center justify-between">
+                          <div className="w-11 h-11 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                            <benefit.icon className="w-5 h-5 text-white" />
                           </div>
-                          <span className="text-xs font-bold uppercase tracking-wider opacity-80">
-                            Ondir
+                          <span className="text-sm font-bold text-white/90 tracking-wide">
+                            ONDIR
                           </span>
                         </div>
-                        <div className="text-xl font-bold">{benefit.discount}</div>
+                        <div className="mt-3 text-lg font-bold text-white">
+                          {benefit.discount}
+                        </div>
+                        
+                        {/* Curved bottom edge */}
+                        <div className="absolute -bottom-5 left-0 right-0 h-6 bg-white rounded-t-[2rem]"></div>
                       </div>
 
-                      {/* Dashed line separator */}
-                      <div className="relative px-6">
-                        <div className="border-t-2 border-dashed border-gray-200"></div>
-                      </div>
-
-                      {/* Coupon bottom part */}
-                      <div className="p-5 space-y-3">
+                      {/* Bottom white section */}
+                      <div className="px-5 pb-5 pt-2 space-y-3">
                         <h3 className="text-lg font-bold text-foreground">
                           {benefit.title}
                         </h3>
@@ -152,12 +148,12 @@ const Features = () => {
                         </p>
                         
                         {/* Barcode effect */}
-                        <div className="pt-3 flex items-center gap-[2px]">
-                          {[...Array(25)].map((_, i) => (
+                        <div className="pt-2 flex items-center gap-[2px]">
+                          {[...Array(30)].map((_, i) => (
                             <div
                               key={i}
-                              className="bg-gray-300 h-6"
-                              style={{ width: Math.random() > 0.5 ? "3px" : "2px" }}
+                              className="bg-gray-300 h-7"
+                              style={{ width: i % 3 === 0 ? "3px" : "2px" }}
                             ></div>
                           ))}
                         </div>
