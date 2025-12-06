@@ -70,10 +70,10 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative">
+            <div className="relative flex justify-center items-center">
+              <div className="relative flex items-center justify-center">
                 {/* Back phone - left */}
-                <div className="absolute -left-12 top-6 w-[140px] md:w-[180px] transform -rotate-6 opacity-80 hidden sm:block">
+                <div className="absolute -left-8 md:-left-16 w-[120px] md:w-[160px] transform -rotate-6 hidden sm:block">
                   <img
                     src={appClube}
                     alt="Ondir App - Clube"
@@ -82,7 +82,7 @@ const CTA = () => {
                 </div>
 
                 {/* Main phone - center */}
-                <div className="relative z-10 w-[180px] md:w-[220px]">
+                <div className="relative z-10 w-[160px] md:w-[200px]">
                   <img
                     src={appMockup}
                     alt="Ondir App"
@@ -91,7 +91,7 @@ const CTA = () => {
                 </div>
 
                 {/* Back phone - right */}
-                <div className="absolute -right-12 top-6 w-[140px] md:w-[180px] transform rotate-6 opacity-80 hidden sm:block">
+                <div className="absolute -right-8 md:-right-16 w-[120px] md:w-[160px] transform rotate-6 hidden sm:block">
                   <img
                     src={appPesquisa}
                     alt="Ondir App - Pesquisa"
