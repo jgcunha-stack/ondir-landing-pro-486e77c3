@@ -24,9 +24,9 @@ const Hero = () => {
         <div className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-white/15 rounded-full animate-float-slow" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container relative pt-24 pb-12 md:pt-36 md:pb-24 px-4">
+      <div className="container relative pt-24 pb-0 md:pt-32 md:pb-0 px-4">
         {/* Hero Content - Centered */}
-        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-4 md:mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-fade-up border border-white/20">
             <Star className="w-3 h-3 md:w-4 md:h-4 fill-white text-white" />
             <span>+10.000 usuários satisfeitos</span>
@@ -45,7 +45,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8 animate-fade-up px-4" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up px-4" style={{ animationDelay: "0.3s" }}>
             <Button size="lg" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 px-6 md:px-8 text-sm md:text-base">
               <Apple className="w-4 h-4 md:w-5 md:h-5" />
               App Store
@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
 
         {/* Phone Mockup Section with Floating Cards */}
-        <div className="relative flex justify-center animate-fade-up px-4" style={{ animationDelay: "0.4s" }}>
+        <div className="relative flex justify-center animate-fade-up mt-6 md:mt-10" style={{ animationDelay: "0.4s" }}>
           <div className="relative max-w-[900px] w-full flex justify-center">
             
             {/* Floating Notification Cards - Left Side - Hidden on mobile */}
@@ -155,10 +155,10 @@ const Hero = () => {
             </div>
 
             {/* Glow effect behind phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] md:w-[350px] h-[400px] md:h-[600px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[450px] h-[500px] md:h-[750px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
 
             {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
-            <div className="relative w-[260px] sm:w-[320px] md:w-[380px] lg:w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+            <div className="relative w-[300px] sm:w-[360px] md:w-[420px] lg:w-[480px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
               <img
                 src={appMockup}
                 alt="Ondir App - Lista de restaurantes"
