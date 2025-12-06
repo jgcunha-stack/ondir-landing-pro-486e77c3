@@ -67,37 +67,37 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
       {/* Diagonal Green Banner */}
       <div className="absolute top-0 left-0 right-0 z-0">
         {/* Bottom straight line with gradient */}
-        <div className="absolute top-8 left-0 right-0 h-12 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-500" />
+        <div className="absolute top-6 md:top-8 left-0 right-0 h-10 md:h-12 bg-gradient-to-r from-brand-900 via-brand-800 to-brand-500" />
         {/* Diagonal banner on top */}
-        <div className="relative h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden translate-y-12">
+        <div className="relative h-10 md:h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden translate-y-10 md:translate-y-12">
           <div className="animate-marquee flex items-center h-full whitespace-nowrap">
             {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
-              <span key={index} className="inline-flex items-center gap-2 mx-6 text-white font-semibold">
+              <span key={index} className="inline-flex items-center gap-1.5 md:gap-2 mx-4 md:mx-6 text-white font-semibold text-sm md:text-base">
                 {item}
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4" />
               </span>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="container relative z-10 pt-8">
+      <div className="container relative z-10 pt-6 md:pt-8 px-4">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4 hover:scale-105 transition-transform duration-300">
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12 animate-fade-up">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-3 md:mb-4 hover:scale-105 transition-transform duration-300">
             Depoimentos
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
             O que nossos <span className="text-brand-500">usuários dizem</span>
           </h2>
         </div>
 
         {/* Avatars Row */}
-        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 px-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+        <div className="flex items-center justify-center gap-1.5 md:gap-4 mb-6 md:mb-8 px-2 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
@@ -107,7 +107,7 @@ const Testimonials = () => {
           </button>
 
           {/* Avatars - Show all on desktop, only nearby on mobile */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-1.5 md:gap-4">
             {testimonials.map((testimonial, index) => {
               // On mobile, only show 2 avatars around the active one
               const distance = Math.abs(index - activeIndex);
@@ -124,7 +124,7 @@ const Testimonials = () => {
                   } ${isVisible ? "flex" : "hidden md:flex"}`}
                 >
                   <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-3 md:border-4 transition-all duration-300 ${
+                    className={`w-10 h-10 md:w-16 md:h-16 rounded-full overflow-hidden border-2 md:border-4 transition-all duration-300 ${
                       index === activeIndex
                         ? "border-brand-500 shadow-lg shadow-brand-500/30"
                         : "border-transparent"
@@ -151,26 +151,26 @@ const Testimonials = () => {
         </div>
 
         {/* Active Testimonial Content */}
-        <div className="text-center max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-1 transition-all duration-300">
+        <div className="text-center max-w-2xl mx-auto px-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 transition-all duration-300">
             {testimonials[activeIndex].name}
           </h3>
-          <p className="text-gray-500 text-sm mb-3">
+          <p className="text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
             {testimonials[activeIndex].role}
           </p>
 
           {/* Rating */}
-          <div className="flex justify-center gap-1 mb-6">
+          <div className="flex justify-center gap-0.5 md:gap-1 mb-4 md:mb-6">
             {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
               <Star
                 key={i}
-                className="w-5 h-5 text-amber-400 fill-amber-400"
+                className="w-4 h-4 md:w-5 md:h-5 text-amber-400 fill-amber-400"
               />
             ))}
           </div>
 
           {/* Content */}
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
             "{testimonials[activeIndex].content}"
           </p>
         </div>

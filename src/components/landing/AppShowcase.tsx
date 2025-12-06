@@ -48,50 +48,50 @@ const showcaseItems = [
 
 const AppShowcase = () => {
   return (
-    <section id="app-showcase" className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden">
-      <div className="container max-w-6xl">
+    <section id="app-showcase" className="relative py-10 md:py-16 lg:py-20 bg-background overflow-hidden">
+      <div className="container max-w-6xl px-4">
         {showcaseItems.map((item, index) => (
           <div
             key={item.title}
             className={`relative flex flex-col ${
               item.imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
-            } items-center gap-8 lg:gap-12 mb-16 lg:mb-20 last:mb-0 animate-fade-up`}
+            } items-center gap-6 lg:gap-12 mb-12 lg:mb-20 last:mb-0 animate-fade-up`}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
             {/* Content Side */}
             <div className="flex-1 text-center lg:text-left">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-sm font-semibold mb-4 border border-brand-200/50 hover:scale-105 transition-transform duration-300">
+              <span className="inline-flex items-center gap-2 px-2.5 py-1 md:px-3 md:py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-3 md:mb-4 border border-brand-200/50 hover:scale-105 transition-transform duration-300">
                 {item.badge}
               </span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
                 {item.title}
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                 {item.description}
               </p>
 
               {/* Features List */}
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                 {item.features.map((feature, featureIndex) => (
-                  <li key={feature} className="flex items-center gap-3 justify-center lg:justify-start hover:translate-x-1 transition-transform duration-300">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-foreground text-sm md:text-base">{feature}</span>
+                  <li key={feature} className="flex items-center gap-2 md:gap-3 justify-center lg:justify-start hover:translate-x-1 transition-transform duration-300">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-foreground text-xs md:text-sm lg:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               {index === 0 && (
-                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                  <Button size="lg" className="gap-2 shadow-lg shadow-brand-500/30">
-                    <Apple className="w-5 h-5" />
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center lg:justify-start">
+                  <Button size="default" className="gap-2 shadow-lg shadow-brand-500/30 text-sm">
+                    <Apple className="w-4 h-4 md:w-5 md:h-5" />
                     App Store
                   </Button>
                   <Button
                     variant="outline"
-                    size="lg"
-                    className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50"
+                    size="default"
+                    className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50 text-sm"
                   >
-                    <PlayCircle className="w-5 h-5" />
+                    <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
                     Google Play
                   </Button>
                 </div>
@@ -101,11 +101,11 @@ const AppShowcase = () => {
             {/* Phone Side */}
             <div className="relative flex-1 flex justify-center">
               {/* Phone Mockup */}
-              <div className="relative w-[260px] md:w-[300px] lg:w-[340px] z-10 transform hover:scale-105 transition-transform duration-500">
+              <div className="relative w-[200px] sm:w-[240px] md:w-[300px] lg:w-[340px] z-10 transform hover:scale-105 transition-transform duration-500">
                 <img
                   src={item.image}
                   alt={`Ondir App - ${item.title}`}
-                  className="w-full h-auto drop-shadow-2xl rounded-[2rem]"
+                  className="w-full h-auto drop-shadow-2xl rounded-[1.5rem] md:rounded-[2rem]"
                 />
               </div>
 
