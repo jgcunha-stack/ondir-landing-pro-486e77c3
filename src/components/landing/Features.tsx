@@ -1,6 +1,6 @@
 import { MapPin, Gift, Sparkles, Users, Star, Trophy, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const benefits = [
   {
@@ -58,6 +58,7 @@ const Features = () => {
     loop: true, 
     align: "center",
   });
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -65,6 +66,25 @@ const Features = () => {
 
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback((index: number) => {
+    if (emblaApi) emblaApi.scrollTo(index);
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
   return (
@@ -175,6 +195,21 @@ const Features = () => {
             >
               <ChevronRight className="w-5 h-5" />
             </button>
+          </div>
+
+          {/* Dots indicators */}
+          <div className="lg:col-start-2 flex justify-center gap-2 mt-4">
+            {benefits.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  selectedIndex === index
+                    ? "bg-brand-500 w-6"
+                    : "bg-brand-200 hover:bg-brand-300"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
