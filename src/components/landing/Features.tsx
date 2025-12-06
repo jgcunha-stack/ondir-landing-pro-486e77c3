@@ -112,7 +112,7 @@ const Features = () => {
 
             {/* Carousel */}
             <div className="overflow-hidden w-[300px] sm:w-[340px] mx-4" ref={emblaRef}>
-              <div className="flex">
+              <div className="flex gap-8">
                 {benefits.map((benefit) => (
                   <div
                     key={benefit.id}
