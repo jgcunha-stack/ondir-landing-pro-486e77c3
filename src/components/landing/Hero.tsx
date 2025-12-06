@@ -24,15 +24,15 @@ const Hero = () => {
         <div className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-white/15 rounded-full animate-float-slow" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container relative pt-28 pb-16 md:pt-36 md:pb-24">
+      <div className="container relative pt-24 pb-12 md:pt-36 md:pb-24 px-4">
         {/* Hero Content - Centered */}
-        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6 animate-fade-up border border-white/20">
-            <Star className="w-4 h-4 fill-white text-white" />
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-fade-up border border-white/20">
+            <Star className="w-3 h-3 md:w-4 md:h-4 fill-white text-white" />
             <span>+10.000 usuários satisfeitos</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Planeje, Descubra e{" "}
             <span className="relative inline-block">
               <span className="text-white">Economize</span>
@@ -40,25 +40,25 @@ const Hero = () => {
             {" "}com o Ondir
           </h1>
 
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base md:text-xl text-white/80 mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-up leading-relaxed px-2" style={{ animationDelay: "0.2s" }}>
             Encontre os melhores restaurantes, bares e eventos. Faça reservas, acumule pontos e ganhe recompensas exclusivas.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 px-8">
-              <Apple className="w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8 animate-fade-up px-4" style={{ animationDelay: "0.3s" }}>
+            <Button size="lg" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 px-6 md:px-8 text-sm md:text-base">
+              <Apple className="w-4 h-4 md:w-5 md:h-5" />
               App Store
             </Button>
-            <Button variant="outline" size="lg" className="gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 px-8">
-              <PlayCircle className="w-5 h-5" />
+            <Button variant="outline" size="lg" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 px-6 md:px-8 text-sm md:text-base">
+              <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
               Google Play
             </Button>
           </div>
         </div>
 
         {/* Phone Mockup Section with Floating Cards */}
-        <div className="relative flex justify-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
+        <div className="relative flex justify-center animate-fade-up px-4" style={{ animationDelay: "0.4s" }}>
           <div className="relative max-w-[900px] w-full flex justify-center">
             
             {/* Floating Notification Cards - Left Side - Hidden on mobile */}
@@ -155,10 +155,10 @@ const Hero = () => {
             </div>
 
             {/* Glow effect behind phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[350px] h-[500px] md:h-[600px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] md:w-[350px] h-[400px] md:h-[600px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
 
             {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
-            <div className="relative w-[320px] md:w-[380px] lg:w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+            <div className="relative w-[260px] sm:w-[320px] md:w-[380px] lg:w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
               <img
                 src={appMockup}
                 alt="Ondir App - Lista de restaurantes"
@@ -169,22 +169,22 @@ const Hero = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="flex flex-wrap gap-6 md:gap-12 justify-center mt-12 md:mt-16 animate-fade-up" style={{ animationDelay: "0.6s" }}>
-          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-white">500+</p>
-            <p className="text-sm text-white/70 font-medium">Estabelecimentos</p>
+        <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-12 justify-center mt-8 md:mt-16 animate-fade-up px-2" style={{ animationDelay: "0.6s" }}>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-2xl md:text-4xl font-bold text-white">500+</p>
+            <p className="text-xs md:text-sm text-white/70 font-medium">Estabelecimentos</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-white">10k+</p>
-            <p className="text-sm text-white/70 font-medium">Downloads</p>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-2xl md:text-4xl font-bold text-white">10k+</p>
+            <p className="text-xs md:text-sm text-white/70 font-medium">Downloads</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-white">4.9</p>
-            <p className="text-sm text-white/70 font-medium">Avaliação</p>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-2xl md:text-4xl font-bold text-white">4.9</p>
+            <p className="text-xs md:text-sm text-white/70 font-medium">Avaliação</p>
           </div>
-          <div className="text-center px-6 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-3xl md:text-4xl font-bold text-white">50k+</p>
-            <p className="text-sm text-white/70 font-medium">Reservas</p>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <p className="text-2xl md:text-4xl font-bold text-white">50k+</p>
+            <p className="text-xs md:text-sm text-white/70 font-medium">Reservas</p>
           </div>
         </div>
       </div>

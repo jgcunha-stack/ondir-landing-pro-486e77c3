@@ -34,23 +34,23 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="relative py-16 md:py-24 bg-gradient-to-b from-white to-brand-50/50 overflow-hidden">
+    <section id="how-it-works" className="relative py-12 md:py-24 bg-gradient-to-b from-white to-brand-50/50 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-purple-100/20 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 animate-fade-up">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16 animate-fade-up">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-3 md:mb-4">
             Como Funciona
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
             Comece em <span className="text-brand-500">4 passos</span>
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-base md:text-lg px-4">
             É simples, rápido e gratuito. Em poucos minutos você estará ganhando recompensas.
           </p>
         </div>
@@ -67,7 +67,7 @@ const HowItWorks = () => {
               <img
                 src={appMockup}
                 alt="Ondir App"
-                className="relative z-10 w-[280px] md:w-[320px] drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                className="relative z-10 w-[220px] sm:w-[260px] md:w-[320px] drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />
 
               {/* Floating elements - in front of phone */}
@@ -107,22 +107,22 @@ const HowItWorks = () => {
                 )}
 
                 {/* Icon */}
-                <div className={`relative flex-shrink-0 w-14 h-14 ${step.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <step.icon className="w-6 h-6 text-white" />
-                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-white text-gray-900 rounded-full flex items-center justify-center text-xs font-bold shadow-md">
+                <div className={`relative flex-shrink-0 w-12 h-12 md:w-14 md:h-14 ${step.color} rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <step.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                  <span className="absolute -top-1.5 -right-1.5 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-white text-gray-900 rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold shadow-md">
                     {step.step}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 bg-white rounded-2xl p-4 shadow-sm border border-gray-100 group-hover:shadow-md group-hover:border-brand-200 transition-all duration-300">
+                <div className="flex-1 bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm border border-gray-100 group-hover:shadow-md group-hover:border-brand-200 transition-all duration-300">
                   <div className="flex items-center justify-between mb-1">
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base md:text-lg font-bold text-gray-900">
                       {step.title}
                     </h3>
                     <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-500 group-hover:translate-x-1 transition-all duration-300" />
                   </div>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-xs md:text-sm">
                     {step.description}
                   </p>
                 </div>
