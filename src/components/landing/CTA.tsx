@@ -70,15 +70,15 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-center -mt-20 md:-mt-32 mb-8">
+            <div className="relative flex justify-center items-end -mt-32 md:-mt-48">
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-white/20 rounded-full blur-[80px]" />
+                <div className="w-[400px] md:w-[550px] h-[400px] md:h-[550px] bg-white/20 rounded-full blur-[80px]" />
               </div>
               
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-end justify-center">
                 {/* Back phone - left */}
-                <div className="absolute -left-14 md:-left-28 top-8 w-[160px] md:w-[220px] transform -rotate-6 hidden sm:block">
+                <div className="absolute -left-16 md:-left-32 bottom-0 w-[180px] md:w-[260px] transform -rotate-6 hidden sm:block">
                   <img
                     src={appClube}
                     alt="Ondir App - Clube"
@@ -87,7 +87,7 @@ const CTA = () => {
                 </div>
 
                 {/* Main phone - center */}
-                <div className="relative z-10 w-[220px] md:w-[300px]">
+                <div className="relative z-10 w-[250px] md:w-[340px]">
                   <img
                     src={appMockup}
                     alt="Ondir App"
@@ -96,7 +96,7 @@ const CTA = () => {
                 </div>
 
                 {/* Back phone - right */}
-                <div className="absolute -right-14 md:-right-28 top-8 w-[160px] md:w-[220px] transform rotate-6 hidden sm:block">
+                <div className="absolute -right-16 md:-right-32 bottom-0 w-[180px] md:w-[260px] transform rotate-6 hidden sm:block">
                   <img
                     src={appPesquisa}
                     alt="Ondir App - Pesquisa"
