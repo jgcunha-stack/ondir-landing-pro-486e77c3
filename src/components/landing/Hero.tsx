@@ -168,27 +168,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-12 justify-center mt-8 md:mt-16 animate-fade-up px-2" style={{ animationDelay: "0.6s" }}>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-2xl md:text-4xl font-bold text-white">500+</p>
-            <p className="text-xs md:text-sm text-white/70 font-medium">Estabelecimentos</p>
-          </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-2xl md:text-4xl font-bold text-white">10k+</p>
-            <p className="text-xs md:text-sm text-white/70 font-medium">Downloads</p>
-          </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-2xl md:text-4xl font-bold text-white">4.9</p>
-            <p className="text-xs md:text-sm text-white/70 font-medium">Avaliação</p>
-          </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-            <p className="text-2xl md:text-4xl font-bold text-white">50k+</p>
-            <p className="text-xs md:text-sm text-white/70 font-medium">Reservas</p>
-          </div>
-        </div>
       </div>
-
     </section>
   );
 };
