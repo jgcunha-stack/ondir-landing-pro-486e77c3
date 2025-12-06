@@ -73,7 +73,7 @@ const Testimonials = () => {
         {/* Bottom straight line with gradient */}
         <div className="absolute top-8 left-0 right-0 h-6 bg-gradient-to-r from-brand-800 via-brand-700 to-brand-900" />
         {/* Diagonal banner on top */}
-        <div className="relative h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden translate-y-2">
+        <div className="relative h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden translate-y-5">
           <div className="animate-marquee flex items-center h-full whitespace-nowrap">
             {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
               <span key={index} className="inline-flex items-center gap-2 mx-6 text-white font-semibold">
