@@ -70,7 +70,7 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-end -mt-40 md:-mt-56">
+            <div className="relative flex justify-center items-end -mt-52 md:-mt-72">
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-[400px] md:w-[550px] h-[400px] md:h-[550px] bg-white/20 rounded-full blur-[80px]" />
