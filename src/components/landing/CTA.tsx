@@ -78,7 +78,7 @@ const CTA = () => {
               
               <div className="relative flex items-center justify-center">
                 {/* Back phone - left */}
-                <div className="absolute -left-10 md:-left-20 w-[140px] md:w-[180px] transform -rotate-6 hidden sm:block">
+                <div className="absolute -left-14 md:-left-28 w-[160px] md:w-[220px] transform -rotate-6 hidden sm:block">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
                   <img
                     src={appClube}
@@ -88,7 +88,7 @@ const CTA = () => {
                 </div>
 
                 {/* Main phone - center */}
-                <div className="relative z-10 w-[180px] md:w-[240px]">
+                <div className="relative z-10 w-[220px] md:w-[300px]">
                   <img
                     src={appMockup}
                     alt="Ondir App"
@@ -97,7 +97,7 @@ const CTA = () => {
                 </div>
 
                 {/* Back phone - right */}
-                <div className="absolute -right-10 md:-right-20 w-[140px] md:w-[180px] transform rotate-6 hidden sm:block">
+                <div className="absolute -right-14 md:-right-28 w-[160px] md:w-[220px] transform rotate-6 hidden sm:block">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
                   <img
                     src={appPesquisa}
