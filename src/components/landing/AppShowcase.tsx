@@ -111,7 +111,7 @@ const AppShowcase = () => {
               {/* Floating badges - hidden on mobile */}
               <div
                 className={`hidden lg:block absolute ${
-                  item.imagePosition === "left" ? "right-[5%]" : "left-[5%]"
+                  item.imagePosition === "left" ? "right-[20%]" : "left-[20%]"
                 } top-[15%] bg-white rounded-xl px-3 py-2 shadow-lg border border-brand-100/50 animate-float z-20`}
               >
                 <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ const AppShowcase = () => {
 
               <div
                 className={`hidden lg:block absolute ${
-                  item.imagePosition === "left" ? "left-[0%]" : "right-[0%]"
+                  item.imagePosition === "left" ? "left-[15%]" : "right-[15%]"
                 } bottom-[20%] bg-white rounded-xl px-3 py-2 shadow-lg border border-brand-100/50 animate-float-slow z-20`}
                 style={{ animationDelay: "1s" }}
               >
