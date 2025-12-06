@@ -100,7 +100,7 @@ const AppShowcase = () => {
             {/* Phone Side */}
             <div className="relative flex-1 flex justify-center">
               {/* Phone Mockup */}
-              <div className="relative w-[220px] md:w-[260px] lg:w-[280px] z-10 transform hover:scale-105 transition-transform duration-500">
+              <div className="relative w-[260px] md:w-[300px] lg:w-[340px] z-10 transform hover:scale-105 transition-transform duration-500">
                 <img
                   src={item.image}
                   alt={`Ondir App - ${item.title}`}
