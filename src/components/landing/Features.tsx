@@ -111,7 +111,7 @@ const Features = () => {
             </button>
 
             {/* Carousel */}
-            <div className="w-[300px] sm:w-[340px] mx-4 overflow-hidden" ref={emblaRef}>
+            <div className="w-[300px] sm:w-[340px] mx-4 py-4 -my-4 overflow-x-hidden overflow-y-visible" ref={emblaRef}>
               <div className="flex">
                 {benefits.map((benefit) => (
                   <div
