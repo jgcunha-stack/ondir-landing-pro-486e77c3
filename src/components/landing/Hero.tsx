@@ -155,10 +155,10 @@ const Hero = () => {
             </div>
 
             {/* Glow effect behind phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[550px] h-[600px] md:h-[900px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[650px] h-[700px] md:h-[1100px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
 
             {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
-            <div className="relative w-[340px] sm:w-[420px] md:w-[500px] lg:w-[580px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+            <div className="relative w-[380px] sm:w-[480px] md:w-[580px] lg:w-[680px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
               <img
                 src={appMockup}
                 alt="Ondir App - Lista de restaurantes"
