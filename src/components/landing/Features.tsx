@@ -101,25 +101,25 @@ const Features = () => {
           </div>
 
           {/* Right side - Single coupon carousel with arrows on sides */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-3">
             {/* Left arrow */}
             <button
               onClick={scrollPrev}
-              className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             {/* Carousel */}
-            <div className="overflow-hidden flex-1" ref={emblaRef}>
+            <div className="overflow-hidden w-[280px] sm:w-[300px]" ref={emblaRef}>
               <div className="flex">
                 {benefits.map((benefit) => (
                   <div
                     key={benefit.id}
-                    className="flex-shrink-0 w-full px-2"
+                    className="flex-shrink-0 w-full"
                   >
                     {/* Coupon Card */}
-                    <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden max-w-[320px] mx-auto">
+                    <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                       {/* Coupon top part */}
                       <div className={`${benefit.color} p-5 text-white relative`}>
                         {/* Decorative circles for coupon effect */}
@@ -171,7 +171,7 @@ const Features = () => {
             {/* Right arrow */}
             <button
               onClick={scrollNext}
-              className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
