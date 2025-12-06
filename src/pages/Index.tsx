@@ -11,7 +11,7 @@ const Index = () => {
       <Header />
       <Hero />
       <Features />
-      <HowItWorks />
+      <HowItWorks className="bg-brand-600" />
       <AppShowcase />
       <Testimonials />
       <CTA />
