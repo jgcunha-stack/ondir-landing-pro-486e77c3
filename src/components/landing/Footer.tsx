@@ -39,12 +39,12 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-foreground pt-16 pb-8">
+    <footer id="contact" className="bg-foreground pt-16 pb-8 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <img src={logoBlue} alt="Ondir" className="h-10 mb-6 brightness-0 invert" />
+          <div className="lg:col-span-2 animate-fade-up">
+            <img src={logoBlue} alt="Ondir" className="h-10 mb-6 brightness-0 invert hover:scale-105 transition-transform duration-300" />
             <p className="text-gray-400 mb-6 max-w-sm">
               Somos a visão clara para saber onde estar. Um olhar guiado para novas experiências.
             </p>
@@ -71,8 +71,8 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          {Object.values(footerLinks).map((section) => (
-            <div key={section.title}>
+          {Object.values(footerLinks).map((section, index) => (
+            <div key={section.title} className="animate-fade-up" style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
               <h4 className="font-semibold text-primary-foreground mb-4">
                 {section.title}
               </h4>
@@ -81,7 +81,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-primary-foreground transition-colors"
+                      className="text-gray-400 hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 inline-block"
                     >
                       {link.label}
                     </a>
@@ -93,17 +93,18 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Ondir. Todos os direitos reservados.
           </p>
           <div className="flex gap-4">
-            {socialLinks.map((social) => (
+            {socialLinks.map((social, index) => (
               <a
                 key={social.label}
                 href={social.href}
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:-translate-y-1 transition-all duration-300"
                 aria-label={social.label}
+                style={{ animationDelay: `${0.5 + index * 0.05}s` }}
               >
                 <social.icon className="w-5 h-5" />
               </a>

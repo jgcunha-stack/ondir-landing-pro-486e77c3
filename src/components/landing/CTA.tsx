@@ -28,7 +28,7 @@ const CTA = () => {
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left side - Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left animate-fade-up">
               <p className="text-brand-200 text-sm font-medium mb-4">
                 Seu destino para descobertas incríveis
               </p>
@@ -42,11 +42,11 @@ const CTA = () => {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
                 {/* Google Play Button */}
                 <a
                   href="#"
-                  className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                 >
                   <PlayCircle className="w-8 h-8" />
                   <div className="text-left">
@@ -58,7 +58,7 @@ const CTA = () => {
                 {/* App Store Button */}
                 <a
                   href="#"
-                  className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                 >
                   <Apple className="w-8 h-8" />
                   <div className="text-left">
@@ -70,10 +70,10 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-end -mt-32 md:-mt-40 translate-y-32 md:translate-y-44">
+            <div className="relative flex justify-center items-end -mt-32 md:-mt-40 translate-y-32 md:translate-y-44 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[400px] md:w-[550px] h-[400px] md:h-[550px] bg-white/20 rounded-full blur-[80px]" />
+                <div className="w-[400px] md:w-[550px] h-[400px] md:h-[550px] bg-white/20 rounded-full blur-[80px] animate-pulse-soft" />
               </div>
               
               <div className="relative flex items-end justify-center">

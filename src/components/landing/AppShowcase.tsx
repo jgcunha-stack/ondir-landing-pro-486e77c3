@@ -55,11 +55,12 @@ const AppShowcase = () => {
             key={item.title}
             className={`relative flex flex-col ${
               item.imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
-            } items-center gap-8 lg:gap-12 mb-16 lg:mb-20 last:mb-0`}
+            } items-center gap-8 lg:gap-12 mb-16 lg:mb-20 last:mb-0 animate-fade-up`}
+            style={{ animationDelay: `${index * 0.2}s` }}
           >
             {/* Content Side */}
             <div className="flex-1 text-center lg:text-left">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-sm font-semibold mb-4 border border-brand-200/50">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-sm font-semibold mb-4 border border-brand-200/50 hover:scale-105 transition-transform duration-300">
                 {item.badge}
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
@@ -71,8 +72,8 @@ const AppShowcase = () => {
 
               {/* Features List */}
               <ul className="space-y-3 mb-6">
-                {item.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 justify-center lg:justify-start">
+                {item.features.map((feature, featureIndex) => (
+                  <li key={feature} className="flex items-center gap-3 justify-center lg:justify-start hover:translate-x-1 transition-transform duration-300">
                     <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span className="text-foreground text-sm md:text-base">{feature}</span>
                   </li>
