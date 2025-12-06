@@ -70,7 +70,7 @@ const Features = () => {
   return (
     <section id="features" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left side - Title and benefits list */}
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
