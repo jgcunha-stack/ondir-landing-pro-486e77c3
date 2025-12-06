@@ -14,7 +14,7 @@ const CTA = () => {
       </div>
 
       <div className="container relative z-10 py-8 md:py-12">
-        <div className="relative rounded-3xl py-12 md:py-16 px-6 md:px-12 overflow-hidden">
+        <div className="relative rounded-3xl py-8 md:py-12 px-6 md:px-12">
           {/* Background with hero image */}
           <div className="absolute inset-0 rounded-3xl overflow-hidden">
             <img 
@@ -70,7 +70,7 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center -mt-20 md:-mt-32 mb-8">
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-white/20 rounded-full blur-[80px]" />
@@ -78,8 +78,7 @@ const CTA = () => {
               
               <div className="relative flex items-center justify-center">
                 {/* Back phone - left */}
-                <div className="absolute -left-14 md:-left-28 w-[160px] md:w-[220px] transform -rotate-6 hidden sm:block">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
+                <div className="absolute -left-14 md:-left-28 top-8 w-[160px] md:w-[220px] transform -rotate-6 hidden sm:block">
                   <img
                     src={appClube}
                     alt="Ondir App - Clube"
@@ -97,8 +96,7 @@ const CTA = () => {
                 </div>
 
                 {/* Back phone - right */}
-                <div className="absolute -right-14 md:-right-28 w-[160px] md:w-[220px] transform rotate-6 hidden sm:block">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
+                <div className="absolute -right-14 md:-right-28 top-8 w-[160px] md:w-[220px] transform rotate-6 hidden sm:block">
                   <img
                     src={appPesquisa}
                     alt="Ondir App - Pesquisa"
