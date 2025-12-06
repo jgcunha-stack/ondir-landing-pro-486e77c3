@@ -69,11 +69,11 @@ const Features = () => {
   }, [emblaApi]);
 
   return (
-    <section id="features" className="py-20 lg:py-32 bg-background overflow-hidden">
+    <section id="features" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr,1.2fr] gap-10 lg:gap-12 items-center">
           {/* Left side - Title and benefits list */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 rounded-full text-brand-600 text-sm font-semibold">
                 <Sparkles className="w-4 h-4" />
@@ -118,30 +118,30 @@ const Features = () => {
           </div>
 
           {/* Right side - Coupon carousel */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+          <div className="overflow-hidden -mr-4 lg:mr-0" ref={emblaRef}>
+            <div className="flex gap-4 md:gap-5">
               {benefits.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="flex-shrink-0 w-[300px] md:w-[340px]"
+                  className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px]"
                 >
                   {/* Coupon Card */}
-                  <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                  <div className="relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                     {/* Coupon top part */}
-                    <div className={`${benefit.color} p-6 text-white relative`}>
+                    <div className={`${benefit.color} p-5 text-white relative`}>
                       {/* Decorative circles for coupon effect */}
-                      <div className="absolute -left-3 bottom-0 w-6 h-6 bg-background rounded-full"></div>
-                      <div className="absolute -right-3 bottom-0 w-6 h-6 bg-background rounded-full"></div>
+                      <div className="absolute -left-2.5 bottom-0 w-5 h-5 bg-background rounded-full"></div>
+                      <div className="absolute -right-2.5 bottom-0 w-5 h-5 bg-background rounded-full"></div>
                       
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-14 h-14 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
-                          <benefit.icon className="w-7 h-7 text-white" />
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+                          <benefit.icon className="w-6 h-6 text-white" />
                         </div>
                         <span className="text-xs font-bold uppercase tracking-wider opacity-80">
                           Ondir
                         </span>
                       </div>
-                      <div className="text-2xl font-bold">{benefit.discount}</div>
+                      <div className="text-xl font-bold">{benefit.discount}</div>
                     </div>
 
                     {/* Dashed line separator */}
@@ -150,20 +150,20 @@ const Features = () => {
                     </div>
 
                     {/* Coupon bottom part */}
-                    <div className="p-6 space-y-4">
-                      <h3 className="text-xl font-bold text-foreground">
+                    <div className="p-5 space-y-3">
+                      <h3 className="text-lg font-bold text-foreground">
                         {benefit.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                         {benefit.description}
                       </p>
                       
                       {/* Barcode effect */}
-                      <div className="pt-4 flex items-center gap-[2px]">
-                        {[...Array(30)].map((_, i) => (
+                      <div className="pt-3 flex items-center gap-[2px]">
+                        {[...Array(25)].map((_, i) => (
                           <div
                             key={i}
-                            className="bg-gray-300 h-8"
+                            className="bg-gray-300 h-6"
                             style={{ width: Math.random() > 0.5 ? "3px" : "2px" }}
                           ></div>
                         ))}
