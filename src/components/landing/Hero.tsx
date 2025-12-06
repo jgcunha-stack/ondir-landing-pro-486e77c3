@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden rounded-b-[3rem] md:rounded-b-[4rem]">
+    <section className="relative h-[85vh] md:min-h-screen overflow-hidden rounded-b-[3rem] md:rounded-b-[4rem]">
       {/* Blue Background with Concentric Circles */}
       <div className="absolute inset-0 rounded-b-[3rem] md:rounded-b-[4rem] overflow-hidden">
         <img 
