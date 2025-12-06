@@ -2,6 +2,7 @@ import { Apple, PlayCircle } from "lucide-react";
 import appMockup from "@/assets/app-mockup.png";
 import appClube from "@/assets/app-clube.png";
 import appPesquisa from "@/assets/app-pesquisa.png";
+import heroBg from "@/assets/hero-bg.png";
 
 const CTA = () => {
   return (
@@ -13,28 +14,16 @@ const CTA = () => {
       </div>
 
       <div className="container relative z-10 py-8 md:py-12">
-        <div className="relative bg-brand-500 rounded-3xl py-12 md:py-16 px-6 md:px-12 overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-0 w-72 h-72 bg-brand-400/30 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-400/20 rounded-full blur-3xl" />
-            
-            {/* Curved lines decoration */}
-            <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 500" preserveAspectRatio="none">
-              <path
-                d="M-100 250C150 150 350 350 600 250C850 150 950 350 1100 250"
-                stroke="white"
-                strokeWidth="2"
-                fill="none"
-              />
-              <path
-                d="M-100 300C150 200 350 400 600 300C850 200 950 400 1100 300"
-                stroke="white"
-                strokeWidth="1.5"
-                fill="none"
-              />
-            </svg>
+        <div className="relative rounded-3xl py-12 md:py-16 px-6 md:px-12 overflow-hidden">
+          {/* Background with hero image */}
+          <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            <img 
+              src={heroBg} 
+              alt="" 
+              className="w-full h-full object-cover"
+            />
+            {/* Subtle overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-brand-600/30" />
           </div>
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
