@@ -101,7 +101,7 @@ const Features = () => {
           </div>
 
           {/* Right side - Single coupon carousel with arrows on sides */}
-          <div className="flex items-center justify-center gap-0 overflow-visible">
+          <div className="flex items-center justify-center gap-0">
             {/* Left arrow */}
             <button
               onClick={scrollPrev}
@@ -111,8 +111,8 @@ const Features = () => {
             </button>
 
             {/* Carousel */}
-            <div className="overflow-visible w-[300px] sm:w-[340px] mx-4 py-4" ref={emblaRef}>
-              <div className="flex gap-8">
+            <div className="w-[300px] sm:w-[340px] mx-4 overflow-hidden" ref={emblaRef}>
+              <div className="flex">
                 {benefits.map((benefit) => (
                   <div
                     key={benefit.id}
