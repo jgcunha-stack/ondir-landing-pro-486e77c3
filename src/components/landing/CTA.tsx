@@ -71,9 +71,15 @@ const CTA = () => {
 
             {/* Right side - Phone Mockups */}
             <div className="relative flex justify-center items-center">
+              {/* Glow effect behind phones */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-brand-400/40 rounded-full blur-3xl" />
+              </div>
+              
               <div className="relative flex items-center justify-center">
                 {/* Back phone - left */}
-                <div className="absolute -left-8 md:-left-16 w-[120px] md:w-[160px] transform -rotate-6 hidden sm:block">
+                <div className="absolute -left-10 md:-left-20 w-[140px] md:w-[180px] transform -rotate-6 hidden sm:block">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
                   <img
                     src={appClube}
                     alt="Ondir App - Clube"
@@ -82,7 +88,7 @@ const CTA = () => {
                 </div>
 
                 {/* Main phone - center */}
-                <div className="relative z-10 w-[160px] md:w-[200px]">
+                <div className="relative z-10 w-[180px] md:w-[240px]">
                   <img
                     src={appMockup}
                     alt="Ondir App"
@@ -91,7 +97,8 @@ const CTA = () => {
                 </div>
 
                 {/* Back phone - right */}
-                <div className="absolute -right-8 md:-right-16 w-[120px] md:w-[160px] transform rotate-6 hidden sm:block">
+                <div className="absolute -right-10 md:-right-20 w-[140px] md:w-[180px] transform rotate-6 hidden sm:block">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-500/50 rounded-[2rem] z-10" />
                   <img
                     src={appPesquisa}
                     alt="Ondir App - Pesquisa"
