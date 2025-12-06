@@ -71,7 +71,7 @@ const Testimonials = () => {
       {/* Diagonal Green Banner */}
       <div className="absolute top-0 left-0 right-0 z-0">
         {/* Bottom straight line with gradient */}
-        <div className="absolute top-8 left-0 right-0 h-32 bg-gradient-to-r from-brand-800 via-brand-700 to-brand-900" />
+        <div className="absolute top-8 left-0 right-0 h-24 bg-gradient-to-r from-brand-800 via-brand-700 to-brand-900" />
         {/* Diagonal banner on top */}
         <div className="relative h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden translate-y-12">
           <div className="animate-marquee flex items-center h-full whitespace-nowrap">
