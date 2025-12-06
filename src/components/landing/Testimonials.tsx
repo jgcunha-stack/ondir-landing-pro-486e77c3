@@ -69,14 +69,19 @@ const Testimonials = () => {
   return (
     <section className="relative py-16 md:py-24 bg-white overflow-hidden">
       {/* Diagonal Green Banner */}
-      <div className="absolute top-0 left-0 right-0 h-12 bg-brand-500 -rotate-1 -translate-y-2 scale-110 overflow-hidden">
-        <div className="animate-marquee flex items-center h-full whitespace-nowrap">
-          {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
-            <span key={index} className="inline-flex items-center gap-2 mx-6 text-white font-semibold">
-              {item}
-              <ArrowUpRight className="w-4 h-4" />
-            </span>
-          ))}
+      <div className="absolute top-0 left-0 right-0 z-0">
+        {/* Bottom straight line */}
+        <div className="absolute top-8 left-0 right-0 h-6 bg-brand-500" />
+        {/* Diagonal banner on top */}
+        <div className="relative h-14 bg-brand-500 -rotate-2 scale-110 overflow-hidden">
+          <div className="animate-marquee flex items-center h-full whitespace-nowrap">
+            {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
+              <span key={index} className="inline-flex items-center gap-2 mx-6 text-white font-semibold">
+                {item}
+                <ArrowUpRight className="w-4 h-4" />
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
