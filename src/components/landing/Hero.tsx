@@ -158,7 +158,7 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[400px] h-[800px] md:h-[700px] bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-3xl" />
 
             {/* Phone Mockup - Using the uploaded mockup with built-in frame */}
-            <div className="relative w-[95vw] max-w-[420px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+            <div className="relative w-[100vw] max-w-[480px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
               <img
                 src={appMockup}
                 alt="Ondir App - Lista de restaurantes"
