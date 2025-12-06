@@ -1,93 +1,177 @@
-const tags = [
-  { label: "Cupons Exclusivos", highlighted: false },
-  { label: "Pontos Acumulados", highlighted: false },
-  { label: "Experiências Locais", highlighted: true },
-  { label: "Parceiros Premium", highlighted: false },
-];
+import { MapPin, Gift, Sparkles, Users, Star, Trophy, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
 
-const stats = [
+const benefits = [
   {
-    title: "Nossos resultados",
-    description: "Conectamos usuários a estabelecimentos locais com ofertas exclusivas. Nossa plataforma transforma interações em recompensas reais.",
-    metrics: [
-      { value: "50+", label: "estabelecimentos parceiros" },
-      { value: "+80%", label: "taxa de satisfação" },
-      { value: "2mil+", label: "cupons resgatados" },
-    ],
+    id: 1,
+    icon: MapPin,
+    title: "Geolocalização",
+    description: "Encontre os melhores estabelecimentos perto de você com recomendações personalizadas baseadas na sua localização.",
+    discount: "Perto de você",
+    color: "bg-brand-500",
   },
   {
-    title: "Economia em 2025",
-    description: "Usuários economizam com cupons e ofertas exclusivas disponíveis apenas no Ondir.",
-    highlight: "R$25mil+",
-    highlightLabel: "em economia para usuários",
+    id: 2,
+    icon: Gift,
+    title: "Cupons Gratuitos",
+    description: "Resgate cupons exclusivos sem pagar nada. Acumule pontos e troque por descontos reais em estabelecimentos parceiros.",
+    discount: "100% Grátis",
+    color: "bg-emerald-500",
+  },
+  {
+    id: 3,
+    icon: Trophy,
+    title: "Sistema de Pontos",
+    description: "Complete tarefas simples no app e ganhe pontos. Quanto mais você interage, mais recompensas você desbloqueia.",
+    discount: "Ganhe Pontos",
+    color: "bg-amber-500",
+  },
+  {
+    id: 4,
+    icon: Sparkles,
+    title: "Recomendações",
+    description: "Receba sugestões inteligentes de lugares e ofertas baseadas nos seus interesses e histórico de uso.",
+    discount: "Para Você",
+    color: "bg-purple-500",
+  },
+  {
+    id: 5,
+    icon: Users,
+    title: "Cronogramas",
+    description: "Acompanhe eventos e programações dos seus estabelecimentos favoritos. Nunca perca uma promoção especial.",
+    discount: "Fique por Dentro",
+    color: "bg-pink-500",
+  },
+  {
+    id: 6,
+    icon: Star,
+    title: "Avaliações Reais",
+    description: "Veja avaliações genuínas de outros usuários e compartilhe suas próprias experiências com a comunidade.",
+    discount: "Confiável",
+    color: "bg-brand-600",
   },
 ];
 
 const Features = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: "start",
+    dragFree: true,
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
-    <section id="features" className="py-20 lg:py-32 bg-brand-900">
+    <section id="features" className="py-20 lg:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left side - Title and tags */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left side - Title and benefits list */}
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              dados que
-              <br />
-              comprovam
-              <br />
-              <span className="text-brand-400">nosso impacto</span>
-            </h2>
+            <div className="space-y-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 rounded-full text-brand-600 text-sm font-semibold">
+                <Sparkles className="w-4 h-4" />
+                Benefícios
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                Por que usar
+                <br />
+                <span className="text-brand-500">o Ondir?</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-md">
+                Descubra como o Ondir transforma sua experiência local em recompensas reais.
+              </p>
+            </div>
             
             <div className="flex flex-wrap gap-3">
-              {tags.map((tag, index) => (
+              {benefits.map((benefit) => (
                 <span
-                  key={index}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                    tag.highlighted
-                      ? "bg-brand-500 text-white"
-                      : "bg-transparent border border-white/30 text-white/80 hover:border-brand-400 hover:text-brand-400"
-                  }`}
+                  key={benefit.id}
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-brand-50 text-brand-700 border border-brand-100 hover:bg-brand-100 transition-colors cursor-pointer"
                 >
-                  {tag.label}
+                  {benefit.title}
                 </span>
               ))}
             </div>
+
+            {/* Navigation arrows */}
+            <div className="flex gap-3">
+              <button
+                onClick={scrollPrev}
+                className="w-12 h-12 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="w-12 h-12 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          {/* Right side - Stats cards */}
-          <div className="space-y-6">
-            {/* First card - Key results */}
-            <div className="bg-white rounded-2xl p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-brand-900">{stats[0].title}</h3>
-              <p className="text-brand-700 leading-relaxed">
-                {stats[0].description}
-              </p>
-              <div className="grid grid-cols-3 gap-4">
-                {stats[0].metrics?.map((metric, index) => (
-                  <div key={index} className="space-y-1">
-                    <span className="text-3xl lg:text-4xl font-bold text-brand-500">
-                      {metric.value}
-                    </span>
-                    <p className="text-sm text-brand-600">{metric.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Right side - Coupon carousel */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {benefits.map((benefit) => (
+                <div
+                  key={benefit.id}
+                  className="flex-shrink-0 w-[300px] md:w-[340px]"
+                >
+                  {/* Coupon Card */}
+                  <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                    {/* Coupon top part */}
+                    <div className={`${benefit.color} p-6 text-white relative`}>
+                      {/* Decorative circles for coupon effect */}
+                      <div className="absolute -left-3 bottom-0 w-6 h-6 bg-background rounded-full"></div>
+                      <div className="absolute -right-3 bottom-0 w-6 h-6 bg-background rounded-full"></div>
+                      
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-14 h-14 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
+                          <benefit.icon className="w-7 h-7 text-white" />
+                        </div>
+                        <span className="text-xs font-bold uppercase tracking-wider opacity-80">
+                          Ondir
+                        </span>
+                      </div>
+                      <div className="text-2xl font-bold">{benefit.discount}</div>
+                    </div>
 
-            {/* Second card - Highlight stat */}
-            <div className="bg-white rounded-2xl p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="space-y-2 flex-1">
-                <h3 className="text-2xl font-bold text-brand-900">{stats[1].title}</h3>
-                <p className="text-brand-700 text-sm leading-relaxed">
-                  {stats[1].description}
-                </p>
-              </div>
-              <div className="text-right">
-                <span className="text-4xl lg:text-5xl font-bold text-brand-500">
-                  {stats[1].highlight}
-                </span>
-                <p className="text-sm text-brand-600 mt-1">{stats[1].highlightLabel}</p>
-              </div>
+                    {/* Dashed line separator */}
+                    <div className="relative px-6">
+                      <div className="border-t-2 border-dashed border-gray-200"></div>
+                    </div>
+
+                    {/* Coupon bottom part */}
+                    <div className="p-6 space-y-4">
+                      <h3 className="text-xl font-bold text-foreground">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {benefit.description}
+                      </p>
+                      
+                      {/* Barcode effect */}
+                      <div className="pt-4 flex items-center gap-[2px]">
+                        {[...Array(30)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="bg-gray-300 h-8"
+                            style={{ width: Math.random() > 0.5 ? "3px" : "2px" }}
+                          ></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
