@@ -87,8 +87,8 @@ const Testimonials = () => {
 
       <div className="container relative z-10 pt-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4 hover:scale-105 transition-transform duration-300">
             Depoimentos
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -97,7 +97,7 @@ const Testimonials = () => {
         </div>
 
         {/* Avatars Row */}
-        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 px-4">
+        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 px-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
@@ -151,8 +151,8 @@ const Testimonials = () => {
         </div>
 
         {/* Active Testimonial Content */}
-        <div className="text-center max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold text-gray-900 mb-1">
+        <div className="text-center max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <h3 className="text-xl font-bold text-gray-900 mb-1 transition-all duration-300">
             {testimonials[activeIndex].name}
           </h3>
           <p className="text-gray-500 text-sm mb-3">

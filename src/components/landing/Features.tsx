@@ -88,14 +88,14 @@ const Features = () => {
   }, [emblaApi]);
 
   return (
-    <section id="features" className="py-20 lg:py-32 bg-background">
+    <section id="features" className="py-20 lg:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center max-w-6xl mx-auto">
           {/* Left side - Title and benefits list */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-6 lg:space-y-8 animate-fade-up">
             <div className="space-y-4">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 rounded-full text-brand-600 text-sm font-semibold">
-                <Sparkles className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 rounded-full text-brand-600 text-sm font-semibold hover:scale-105 transition-transform duration-300">
+                <Sparkles className="w-4 h-4 animate-pulse-soft" />
                 Benefícios
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
@@ -109,10 +109,11 @@ const Features = () => {
             </div>
             
             <div className="flex flex-wrap gap-3">
-              {benefits.map((benefit) => (
+              {benefits.map((benefit, index) => (
                 <span
                   key={benefit.id}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-brand-50 text-brand-700 border border-brand-100 hover:bg-brand-100 transition-colors cursor-pointer"
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-brand-50 text-brand-700 border border-brand-100 hover:bg-brand-100 hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-up"
+                  style={{ animationDelay: `${0.3 + index * 0.05}s` }}
                 >
                   {benefit.title}
                 </span>
@@ -121,11 +122,11 @@ const Features = () => {
           </div>
 
           {/* Right side - Single coupon carousel with arrows on sides */}
-          <div className="flex items-center justify-center gap-0">
+          <div className="flex items-center justify-center gap-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             {/* Left arrow */}
             <button
               onClick={scrollPrev}
-              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600 hover:scale-110 active:scale-95"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -191,7 +192,7 @@ const Features = () => {
             {/* Right arrow */}
             <button
               onClick={scrollNext}
-              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600"
+              className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-brand-200 flex items-center justify-center hover:bg-brand-500 hover:border-brand-500 hover:text-white transition-all text-brand-600 hover:scale-110 active:scale-95"
             >
               <ChevronRight className="w-5 h-5" />
             </button>

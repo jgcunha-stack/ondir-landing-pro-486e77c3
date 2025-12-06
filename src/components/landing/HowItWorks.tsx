@@ -37,13 +37,13 @@ const HowItWorks = () => {
     <section id="how-it-works" className="relative py-16 md:py-24 bg-gradient-to-b from-white to-brand-50/50 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-brand-100/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
       </div>
 
       <div className="container relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 animate-fade-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold mb-4">
             Como Funciona
           </span>
@@ -58,16 +58,16 @@ const HowItWorks = () => {
         {/* Split Layout */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           {/* Phone Mockup */}
-          <div className="relative order-2 lg:order-1 flex justify-center">
+          <div className="relative order-2 lg:order-1 flex justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               {/* Glow behind phone */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-400/30 to-purple-400/30 rounded-[3rem] blur-2xl scale-90" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-400/30 to-purple-400/30 rounded-[3rem] blur-2xl scale-90 animate-pulse-soft" />
               
               {/* Phone image */}
               <img
                 src={appMockup}
                 alt="Ondir App"
-                className="relative z-10 w-[280px] md:w-[320px] drop-shadow-2xl"
+                className="relative z-10 w-[280px] md:w-[320px] drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />
 
               {/* Floating elements - in front of phone */}
@@ -98,7 +98,8 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div
                 key={step.step}
-                className="group relative flex gap-4 items-start"
+                className="group relative flex gap-4 items-start animate-fade-up"
+                style={{ animationDelay: `${0.1 + index * 0.15}s` }}
               >
                 {/* Timeline line */}
                 {index < steps.length - 1 && (
