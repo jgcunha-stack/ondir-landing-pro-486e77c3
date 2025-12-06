@@ -6,20 +6,16 @@ import AppShowcase from "@/components/landing/AppShowcase";
 import Testimonials from "@/components/landing/Testimonials";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
-
 const Index = () => {
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       <Header />
       <Hero />
       <Features />
-      <HowItWorks />
+      <HowItWorks className="bg-brand-500" />
       <AppShowcase />
       <Testimonials />
       <CTA />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
