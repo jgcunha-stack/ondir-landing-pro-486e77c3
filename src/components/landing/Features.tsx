@@ -88,7 +88,7 @@ const Features = () => {
   }, [emblaApi]);
 
   return (
-    <section id="features" className="py-12 md:py-20 lg:py-24 bg-background overflow-hidden">
+    <section id="features" className="pt-12 pb-8 md:pt-20 md:pb-12 lg:pt-24 lg:pb-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left side - Title and benefits list */}
