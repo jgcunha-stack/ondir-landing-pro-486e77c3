@@ -44,7 +44,14 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.querySelector(link.href === "#" ? "body" : link.href);
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className={`text-sm font-medium transition-colors cursor-pointer ${
                   isScrolled
                     ? index === 0
                       ? "text-brand-600"
@@ -87,7 +94,14 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors py-2 px-3 rounded-lg hover:bg-brand-50"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const target = document.querySelector(link.href === "#" ? "body" : link.href);
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {link.label}
               </a>
