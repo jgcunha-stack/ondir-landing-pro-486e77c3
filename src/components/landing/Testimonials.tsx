@@ -67,7 +67,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="relative py-12 md:py-24 lg:py-32 bg-white overflow-hidden">
       {/* Diagonal Green Banner */}
       <div className="absolute top-0 left-0 right-0 z-0">
         {/* Bottom straight line with gradient */}
@@ -86,9 +86,9 @@ const Testimonials = () => {
       </div>
 
       <div
-        className="container relative z-10 px-6 md:px-4"
+        className="container relative z-10 px-4 md:px-4"
         style={{
-          paddingTop: '80px' // Controle em pixels - espaço entre linha azul e Depoimentos (MOBILE)
+          paddingTop: '60px' // Controle em pixels - espaço entre linha azul e Depoimentos (MOBILE)
         }}
       >
         {/* Section Header - Mobile */}
@@ -107,7 +107,7 @@ const Testimonials = () => {
             Depoimentos
           </span>
           <h2
-            className="text-5xl sm:text-6xl font-bold text-gray-900"
+            className="text-2xl sm:text-3xl font-bold text-gray-900"
             style={{
               marginBottom: '0px' // Controle em pixels (MOBILE)
             }}

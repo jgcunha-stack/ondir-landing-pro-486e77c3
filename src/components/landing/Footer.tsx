@@ -39,8 +39,8 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-foreground pt-12 md:pt-16 pb-6 md:pb-8 overflow-hidden">
-      <div className="container px-6 md:px-4">
+    <footer id="contact" className="bg-foreground pt-10 md:pt-16 pb-6 md:pb-8 overflow-hidden">
+      <div className="container px-4 md:px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2 animate-fade-up">

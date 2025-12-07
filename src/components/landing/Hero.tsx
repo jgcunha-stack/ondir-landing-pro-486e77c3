@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-white/15 rounded-full animate-float-slow" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container relative pt-24 pb-0 md:pt-32 md:pb-0 px-6 md:px-4">
+      <div className="container relative pt-20 pb-0 md:pt-32 md:pb-0 px-4 md:px-4">
         {/* Hero Content - Centered */}
         <div className="text-center max-w-4xl mx-auto mb-4 md:mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-fade-up border border-white/20">

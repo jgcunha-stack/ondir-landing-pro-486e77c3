@@ -48,10 +48,10 @@ const showcaseItems = [
 
 const AppShowcase = () => {
   return (
-    <section id="app-showcase" className="relative py-16 md:py-24 lg:py-32 bg-background overflow-hidden">
+    <section id="app-showcase" className="relative py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
       {/* Container com overflow-hidden para cortar o celular no mobile */}
       <div className="relative overflow-hidden md:overflow-visible">
-        <div className="container max-w-6xl px-6 md:px-4 relative z-10">
+        <div className="container max-w-6xl px-4 md:px-4 relative z-10">
           {showcaseItems.map((item, index) => (
             <div
               key={item.title}
@@ -68,7 +68,7 @@ const AppShowcase = () => {
                 <span className="inline-flex items-center gap-2 px-2.5 py-1 md:px-3 md:py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-2 md:mb-4 border border-brand-200/50 hover:scale-105 transition-transform duration-300">
                   {item.badge}
                 </span>
-                <h2 className="text-5xl sm:text-6xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 md:mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 md:mb-4 leading-tight">
                   {item.title}
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-3 md:mb-6 leading-relaxed">
