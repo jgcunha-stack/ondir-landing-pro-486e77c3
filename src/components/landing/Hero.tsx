@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute bottom-[30%] right-[15%] w-4 h-4 bg-white/15 rounded-full animate-float-slow" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container relative pt-24 pb-0 md:pt-32 md:pb-0 px-4">
+      <div className="container relative pt-24 pb-0 md:pt-32 md:pb-0 px-6 md:px-4">
         {/* Hero Content - Centered */}
         <div className="text-center max-w-4xl mx-auto mb-4 md:mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-white/15 backdrop-blur-sm rounded-full text-white text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-fade-up border border-white/20">
@@ -32,7 +32,7 @@ const Hero = () => {
             <span>+10.000 usuários satisfeitos</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Planeje, Descubra e{" "}
             <span className="relative inline-block">
               <span className="text-white">Economize</span>

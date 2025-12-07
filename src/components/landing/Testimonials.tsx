@@ -46,7 +46,7 @@ const testimonials = [
 
 const marqueeItems = [
   "São Paulo",
-  "Rio de Janeiro", 
+  "Rio de Janeiro",
   "Belo Horizonte",
   "Curitiba",
   "Porto Alegre",
@@ -67,7 +67,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
+    <section className="relative py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
       {/* Diagonal Green Banner */}
       <div className="absolute top-0 left-0 right-0 z-0">
         {/* Bottom straight line with gradient */}
@@ -85,50 +85,74 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="container relative z-10 pt-6 md:pt-8 px-4">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12 animate-fade-up">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-3 md:mb-4 hover:scale-105 transition-transform duration-300">
+      <div
+        className="container relative z-10 px-6 md:px-4"
+        style={{
+          paddingTop: '80px' // Controle em pixels - espaço entre linha azul e Depoimentos (MOBILE)
+        }}
+      >
+        {/* Section Header - Mobile */}
+        <div
+          className="text-center max-w-2xl mx-auto animate-fade-up md:hidden"
+          style={{
+            marginBottom: '16px' // Controle em pixels (MOBILE)
+          }}
+        >
+          <span
+            className="inline-flex items-center gap-2 px-2.5 py-1 bg-brand-100 rounded-full text-brand-600 text-xs font-semibold hover:scale-105 transition-transform duration-300"
+            style={{
+              marginBottom: '6px' // Controle em pixels (MOBILE)
+            }}
+          >
             Depoimentos
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+          <h2
+            className="text-5xl sm:text-6xl font-bold text-gray-900"
+            style={{
+              marginBottom: '0px' // Controle em pixels (MOBILE)
+            }}
+          >
             O que nossos <span className="text-brand-500">usuários dizem</span>
           </h2>
         </div>
 
-        {/* Avatars Row */}
-        <div className="flex items-center justify-center gap-1.5 md:gap-4 mb-6 md:mb-8 px-2 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+        {/* Avatars Row - Mobile */}
+        <div
+          className="flex items-center justify-center gap-1.5 px-2 animate-fade-up md:hidden"
+          style={{
+            animationDelay: "0.1s",
+            marginBottom: '12px' // Controle em pixels (MOBILE)
+          }}
+        >
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
           >
-            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+            <ChevronLeft className="w-4 h-4" />
           </button>
 
-          {/* Avatars - Show all on desktop, only nearby on mobile */}
-          <div className="flex items-center gap-1.5 md:gap-4">
+          {/* Avatars - Show only nearby on mobile */}
+          <div className="flex items-center gap-1.5">
             {testimonials.map((testimonial, index) => {
               // On mobile, only show 2 avatars around the active one
               const distance = Math.abs(index - activeIndex);
               const isVisible = distance <= 1 || (activeIndex === 0 && index === testimonials.length - 1) || (activeIndex === testimonials.length - 1 && index === 0);
-              
+
               return (
                 <button
                   key={testimonial.name}
                   onClick={() => setActiveIndex(index)}
-                  className={`relative flex-shrink-0 transition-all duration-300 ${
-                    index === activeIndex
-                      ? "scale-110 z-10"
-                      : "scale-100 opacity-70 hover:opacity-100"
-                  } ${isVisible ? "flex" : "hidden md:flex"}`}
+                  className={`relative flex-shrink-0 transition-all duration-300 ${index === activeIndex
+                    ? "scale-110 z-10"
+                    : "scale-100 opacity-70 hover:opacity-100"
+                    } ${isVisible ? "flex" : "hidden"}`}
                 >
                   <div
-                    className={`w-10 h-10 md:w-16 md:h-16 rounded-full overflow-hidden border-2 md:border-4 transition-all duration-300 ${
-                      index === activeIndex
-                        ? "border-brand-500 shadow-lg shadow-brand-500/30"
-                        : "border-transparent"
-                    }`}
+                    className={`w-10 h-10 rounded-full overflow-hidden border-2 transition-all duration-300 ${index === activeIndex
+                      ? "border-brand-500 shadow-lg shadow-brand-500/30"
+                      : "border-transparent"
+                      }`}
                   >
                     <img
                       src={testimonial.avatar}
@@ -144,33 +168,286 @@ const Testimonials = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
           >
-            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+            <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Active Testimonial Content */}
-        <div className="text-center max-w-2xl mx-auto px-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 transition-all duration-300">
+        {/* Active Testimonial Content - Mobile */}
+        <div
+          className="text-center max-w-2xl mx-auto px-4 animate-fade-up md:hidden"
+          style={{
+            animationDelay: "0.2s"
+          }}
+        >
+          <h3
+            className="text-base font-bold text-gray-900 transition-all duration-300"
+            style={{
+              marginBottom: '1px' // Controle em pixels (MOBILE)
+            }}
+          >
             {testimonials[activeIndex].name}
           </h3>
-          <p className="text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
+          <p
+            className="text-gray-500 text-xs"
+            style={{
+              marginBottom: '4px' // Controle em pixels (MOBILE)
+            }}
+          >
             {testimonials[activeIndex].role}
           </p>
 
           {/* Rating */}
-          <div className="flex justify-center gap-0.5 md:gap-1 mb-4 md:mb-6">
+          <div
+            className="flex justify-center gap-0.5"
+            style={{
+              marginBottom: '8px' // Controle em pixels (MOBILE)
+            }}
+          >
             {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
               <Star
                 key={i}
-                className="w-4 h-4 md:w-5 md:h-5 text-amber-400 fill-amber-400"
+                className="w-4 h-4 text-amber-400 fill-amber-400"
               />
             ))}
           </div>
 
           {/* Content */}
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
+            "{testimonials[activeIndex].content}"
+          </p>
+        </div>
+      </div>
+
+      {/* Container - Desktop */}
+      <div
+        className="container relative z-10 px-4 hidden md:block"
+        style={{
+          paddingTop: '32px' // Controle em pixels - espaço entre linha azul e Depoimentos (DESKTOP)
+        }}
+      >
+        {/* Section Header - Desktop */}
+        <div
+          className="text-center max-w-2xl mx-auto animate-fade-up"
+          style={{
+            marginBottom: '48px' // Controle em pixels (DESKTOP)
+          }}
+        >
+          <span
+            className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 rounded-full text-brand-600 text-sm font-semibold hover:scale-105 transition-transform duration-300"
+            style={{
+              marginBottom: '16px' // Controle em pixels (DESKTOP)
+            }}
+          >
+            Depoimentos
+          </span>
+          <h2
+            className="text-4xl lg:text-5xl font-bold text-gray-900"
+            style={{
+              marginBottom: '16px' // Controle em pixels (DESKTOP)
+            }}
+          >
+            O que nossos <span className="text-brand-500">usuários dizem</span>
+          </h2>
+        </div>
+
+        {/* Avatars Row - Mobile */}
+        <div
+          className="flex items-center justify-center gap-1.5 px-2 animate-fade-up md:hidden"
+          style={{
+            animationDelay: "0.1s",
+            marginBottom: '12px' // Controle em pixels (MOBILE)
+          }}
+        >
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          {/* Avatars - Show only nearby on mobile */}
+          <div className="flex items-center gap-1.5">
+            {testimonials.map((testimonial, index) => {
+              // On mobile, only show 2 avatars around the active one
+              const distance = Math.abs(index - activeIndex);
+              const isVisible = distance <= 1 || (activeIndex === 0 && index === testimonials.length - 1) || (activeIndex === testimonials.length - 1 && index === 0);
+
+              return (
+                <button
+                  key={testimonial.name}
+                  onClick={() => setActiveIndex(index)}
+                  className={`relative flex-shrink-0 transition-all duration-300 ${index === activeIndex
+                    ? "scale-110 z-10"
+                    : "scale-100 opacity-70 hover:opacity-100"
+                    } ${isVisible ? "flex" : "hidden"}`}
+                >
+                  <div
+                    className={`w-10 h-10 rounded-full overflow-hidden border-2 transition-all duration-300 ${index === activeIndex
+                      ? "border-brand-500 shadow-lg shadow-brand-500/30"
+                      : "border-transparent"
+                      }`}
+                  >
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Avatars Row - Desktop */}
+        <div
+          className="flex items-center justify-center gap-4 px-2 animate-fade-up hidden md:flex"
+          style={{
+            animationDelay: "0.1s",
+            marginBottom: '32px' // Controle em pixels (DESKTOP)
+          }}
+        >
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          {/* Avatars - Show all on desktop */}
+          <div className="flex items-center gap-4">
+            {testimonials.map((testimonial, index) => (
+              <button
+                key={testimonial.name}
+                onClick={() => setActiveIndex(index)}
+                className={`relative flex-shrink-0 transition-all duration-300 flex ${index === activeIndex
+                  ? "scale-110 z-10"
+                  : "scale-100 opacity-70 hover:opacity-100"
+                  }`}
+              >
+                <div
+                  className={`w-16 h-16 rounded-full overflow-hidden border-4 transition-all duration-300 ${index === activeIndex
+                    ? "border-brand-500 shadow-lg shadow-brand-500/30"
+                    : "border-transparent"
+                    }`}
+                >
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center hover:bg-brand-600 transition-colors shadow-lg"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Active Testimonial Content - Mobile */}
+        <div
+          className="text-center max-w-2xl mx-auto px-4 animate-fade-up md:hidden"
+          style={{
+            animationDelay: "0.2s"
+          }}
+        >
+          <h3
+            className="text-base font-bold text-gray-900 transition-all duration-300"
+            style={{
+              marginBottom: '1px' // Controle em pixels (MOBILE)
+            }}
+          >
+            {testimonials[activeIndex].name}
+          </h3>
+          <p
+            className="text-gray-500 text-xs"
+            style={{
+              marginBottom: '4px' // Controle em pixels (MOBILE)
+            }}
+          >
+            {testimonials[activeIndex].role}
+          </p>
+
+          {/* Rating */}
+          <div
+            className="flex justify-center gap-0.5"
+            style={{
+              marginBottom: '8px' // Controle em pixels (MOBILE)
+            }}
+          >
+            {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-4 h-4 text-amber-400 fill-amber-400"
+              />
+            ))}
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-600 text-sm leading-relaxed">
+            "{testimonials[activeIndex].content}"
+          </p>
+        </div>
+
+        {/* Active Testimonial Content - Desktop */}
+        <div
+          className="text-center max-w-2xl mx-auto px-4 animate-fade-up hidden md:block"
+          style={{
+            animationDelay: "0.2s"
+          }}
+        >
+          <h3
+            className="text-xl font-bold text-gray-900 transition-all duration-300"
+            style={{
+              marginBottom: '4px' // Controle em pixels (DESKTOP)
+            }}
+          >
+            {testimonials[activeIndex].name}
+          </h3>
+          <p
+            className="text-gray-500 text-sm"
+            style={{
+              marginBottom: '12px' // Controle em pixels (DESKTOP)
+            }}
+          >
+            {testimonials[activeIndex].role}
+          </p>
+
+          {/* Rating */}
+          <div
+            className="flex justify-center gap-1"
+            style={{
+              marginBottom: '24px' // Controle em pixels (DESKTOP)
+            }}
+          >
+            {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-5 h-5 text-amber-400 fill-amber-400"
+              />
+            ))}
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-600 text-lg leading-relaxed">
             "{testimonials[activeIndex].content}"
           </p>
         </div>

@@ -88,8 +88,8 @@ const Features = () => {
   }, [emblaApi]);
 
   return (
-    <section id="features" className="py-12 md:py-20 lg:py-32 bg-background overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-16 md:py-24 lg:py-32 bg-background overflow-hidden">
+      <div className="container mx-auto px-6 md:px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center max-w-6xl mx-auto">
           {/* Left side - Title and benefits list */}
           <div className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-up">
@@ -98,7 +98,7 @@ const Features = () => {
                 <Sparkles className="w-3 h-3 md:w-4 md:h-4 animate-pulse-soft" />
                 Benefícios
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h2 className="text-5xl sm:text-6xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Por que usar
                 <br />
                 <span className="text-brand-500">o Ondir?</span>
