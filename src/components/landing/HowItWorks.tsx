@@ -34,7 +34,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="relative py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
+    <section id="how-it-works" className="relative py-12 md:py-32 lg:py-40 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
@@ -45,7 +45,7 @@ const HowItWorks = () => {
       <div className="relative overflow-hidden md:overflow-visible">
         <div className="container relative z-10 px-4 md:px-4">
           {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto mb-6 md:mb-16 animate-fade-up">
+          <div className="text-center max-w-2xl mx-auto mb-6 md:mb-20 animate-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-2 md:mb-4">
               Como Funciona
             </span>
@@ -59,7 +59,7 @@ const HowItWorks = () => {
 
           {/* Split Layout */}
           <div
-            className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto md:pb-0"
+            className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto md:pb-0"
             style={{
               paddingBottom: '60px', // Espaço para o celular no mobile - controle em pixels
               marginBottom: '0px' // Controle em pixels - pode usar valores negativos (MOBILE)

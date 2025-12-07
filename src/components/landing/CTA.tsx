@@ -13,7 +13,7 @@ const CTA = () => {
         <div className="h-1/2 bg-gray-900" />
       </div>
 
-      <div className="container relative z-10 py-2 md:py-6 px-4 md:px-4">
+      <div className="container relative z-10 py-2 md:py-12 px-4 md:px-4">
         {/* Card with overflow hidden to cut the phone */}
         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden max-w-md md:max-w-none mx-auto">
           {/* Background with hero image */}

@@ -67,7 +67,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative py-12 md:py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="relative py-12 md:py-32 lg:py-40 bg-white overflow-hidden">
       {/* Diagonal Green Banner */}
       <div className="absolute top-0 left-0 right-0 z-0">
         {/* Bottom straight line with gradient */}
