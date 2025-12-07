@@ -6,26 +6,15 @@ const footerLinks = {
   product: {
     title: "Produto",
     links: [
-      { label: "Recursos", href: "#features", isExternal: true },
-      { label: "Como Funciona", href: "#how-it-works", isExternal: true },
-      { label: "Preços", href: "#", isExternal: true },
-      { label: "FAQ", href: "#", isExternal: true },
-    ],
-  },
-  company: {
-    title: "Empresa",
-    links: [
-      { label: "Sobre Nós", href: "#", isExternal: true },
-      { label: "Carreiras", href: "#", isExternal: true },
-      { label: "Blog", href: "#", isExternal: true },
-      { label: "Imprensa", href: "#", isExternal: true },
+      { label: "Recursos", href: "#features", isExternal: true, isAnchor: true },
+      { label: "Como Funciona", href: "#how-it-works", isExternal: true, isAnchor: true },
     ],
   },
   legal: {
     title: "Legal",
     links: [
-      { label: "Termos de Uso", href: "/termos-de-uso", isExternal: false },
-      { label: "Privacidade", href: "/privacidade", isExternal: false },
+      { label: "Termos de Uso", href: "/termos-de-uso", isExternal: false, isAnchor: false },
+      { label: "Privacidade", href: "/privacidade", isExternal: false, isAnchor: false },
     ],
   },
 };
@@ -79,10 +68,17 @@ const Footer = () => {
               <ul className="space-y-2 md:space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    {link.isExternal ? (
+                    {link.isAnchor ? (
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 inline-block text-sm md:text-base"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const target = document.querySelector(link.href);
+                          if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }}
+                        className="text-gray-400 hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 inline-block text-sm md:text-base cursor-pointer"
                       >
                         {link.label}
                       </a>
