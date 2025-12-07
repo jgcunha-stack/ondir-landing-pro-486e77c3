@@ -49,7 +49,23 @@ const showcaseItems = [
 const AppShowcase = () => {
   return (
     <section id="app-showcase" className="relative py-10 md:py-16 lg:py-20 bg-background overflow-hidden">
-      <div className="container max-w-6xl px-4">
+      {/* Bottom curved border */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
+        <svg
+          viewBox="0 0 1440 96"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute bottom-0 w-full h-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 96V0C240 64 480 96 720 96C960 96 1200 64 1440 0V96H0Z"
+            fill="hsl(var(--primary))"
+          />
+        </svg>
+      </div>
+
+      <div className="container max-w-6xl px-4 relative z-10">
         {showcaseItems.map((item, index) => (
           <div
             key={item.title}
