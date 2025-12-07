@@ -13,8 +13,8 @@ const CTA = () => {
         <div className="h-1/2 bg-gray-900" />
       </div>
 
-      <div className="container relative z-10 py-6 md:py-12 px-4">
-        <div className="relative rounded-2xl md:rounded-3xl py-6 md:py-12 px-4 md:px-12 overflow-hidden">
+      <div className="container relative z-10 pt-32 md:pt-48 pb-6 md:pb-12 px-4">
+        <div className="relative rounded-2xl md:rounded-3xl py-6 md:py-12 px-4 md:px-12">
           {/* Background with hero image */}
           <div className="absolute inset-0 rounded-2xl md:rounded-3xl overflow-hidden">
             <img 
@@ -70,7 +70,7 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-end -mt-20 md:-mt-40 translate-y-24 md:translate-y-44 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="relative flex justify-center items-end -mt-32 md:-mt-56 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-[300px] md:w-[550px] h-[300px] md:h-[550px] bg-white/20 rounded-full blur-[80px] animate-pulse-soft" />
