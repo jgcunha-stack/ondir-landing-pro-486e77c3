@@ -68,7 +68,7 @@ const AppShowcase = () => {
                 <span className="inline-flex items-center gap-2 px-2.5 py-1 md:px-3 md:py-1.5 bg-brand-500/10 backdrop-blur-sm rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-2 md:mb-4 border border-brand-200/50 hover:scale-105 transition-transform duration-300">
                   {item.badge}
                 </span>
-                <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 md:mb-4 leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 md:mb-4 leading-tight">
                   {item.title}
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-3 md:mb-6 leading-relaxed">

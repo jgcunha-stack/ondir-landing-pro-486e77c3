@@ -49,7 +49,7 @@ const HowItWorks = () => {
             <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-2 md:mb-4">
               Como Funciona
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-4">
               Comece em <span className="text-brand-500">4 passos</span>
             </h2>
             <p className="text-gray-600 text-sm md:text-lg">
