@@ -70,7 +70,7 @@ const CTA = () => {
             </div>
 
             {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-end -mt-32 md:-mt-56 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="relative flex justify-center items-end mt-8 md:-mt-56 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               {/* Glow effect behind phones */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-[300px] md:w-[550px] h-[300px] md:h-[550px] bg-white/20 rounded-full blur-[80px] animate-pulse-soft" />
@@ -86,12 +86,12 @@ const CTA = () => {
                   />
                 </div>
 
-                {/* Main phone - center */}
-                <div className="relative z-10 w-[180px] sm:w-[220px] md:w-[340px]">
+                {/* Main phone - center - bigger on mobile */}
+                <div className="relative z-10 w-[280px] sm:w-[220px] md:w-[340px] translate-y-20 sm:translate-y-0">
                   <img
                     src={appMockup}
                     alt="Ondir App"
-                    className="w-full drop-shadow-2xl rounded-[1.5rem] md:rounded-[2rem]"
+                    className="w-full drop-shadow-2xl rounded-[2rem] md:rounded-[2rem]"
                   />
                 </div>
 
