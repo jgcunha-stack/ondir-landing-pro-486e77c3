@@ -7,12 +7,37 @@ import logoWhite from "@/assets/logo-white.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Detect active section
+      const sections = ["testimonials", "how-it-works", "features"];
+      let currentSection = "#";
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150) {
+            currentSection = `#${sectionId}`;
+            break;
+          }
+        }
+      }
+
+      // If we're at the very top, set Home as active
+      if (window.scrollY < 100) {
+        currentSection = "#";
+      }
+
+      setActiveSection(currentSection);
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -22,6 +47,8 @@ const Header = () => {
     { label: "Como Funciona", href: "#how-it-works" },
     { label: "Depoimentos", href: "#testimonials" },
   ];
+
+  const isActive = (href: string) => activeSection === href;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
@@ -40,7 +67,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -53,10 +80,12 @@ const Header = () => {
                 }}
                 className={`text-sm font-medium transition-colors cursor-pointer ${
                   isScrolled
-                    ? index === 0
+                    ? isActive(link.href)
                       ? "text-brand-600"
                       : "text-gray-600 hover:text-brand-600"
-                    : "text-white/90 hover:text-white"
+                    : isActive(link.href)
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -93,7 +122,11 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors py-2 px-3 rounded-lg hover:bg-brand-50"
+                className={`text-sm font-medium transition-colors py-2 px-3 rounded-lg ${
+                  isActive(link.href)
+                    ? "text-brand-600 bg-brand-50"
+                    : "text-gray-600 hover:text-brand-600 hover:bg-brand-50"
+                }`}
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMobileMenuOpen(false);
