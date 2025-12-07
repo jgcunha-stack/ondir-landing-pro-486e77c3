@@ -52,8 +52,8 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <Button size="lg" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1">
-                <Apple className="w-4 h-4 md:w-5 md:h-5" />
+              <Button size="xl" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 md:h-14 md:px-8 md:text-base md:rounded-xl">
+                <Apple className="w-5 h-5" />
                 App Store
               </Button>
             </a>
@@ -63,8 +63,8 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <Button variant="outline" size="lg" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1">
-                <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
+              <Button variant="outline" size="xl" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 md:h-14 md:px-8 md:text-base md:rounded-xl">
+                <PlayCircle className="w-5 h-5" />
                 Google Play
               </Button>
             </a>
