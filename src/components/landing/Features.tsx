@@ -88,11 +88,11 @@ const Features = () => {
   }, [emblaApi]);
 
   return (
-    <section id="features" className="py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
+    <section id="features" className="py-12 md:py-32 lg:py-40 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left side - Title and benefits list */}
-          <div className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-up">
+          <div className="space-y-2 md:space-y-6 lg:space-y-8 animate-fade-up">
             <div className="space-y-2 md:space-y-4 text-center lg:text-left">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-500/10 rounded-full text-brand-600 text-xs md:text-sm font-semibold hover:scale-105 transition-transform duration-300">
                 <Sparkles className="w-3 h-3 md:w-4 md:h-4 animate-pulse-soft" />

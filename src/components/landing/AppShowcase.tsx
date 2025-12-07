@@ -48,7 +48,7 @@ const showcaseItems = [
 
 const AppShowcase = () => {
   return (
-    <section id="app-showcase" className="relative py-12 md:py-24 lg:py-32 bg-background overflow-hidden">
+    <section id="app-showcase" className="relative py-12 md:py-32 lg:py-40 bg-background overflow-hidden">
       {/* Container com overflow-hidden para cortar o celular no mobile */}
       <div className="relative overflow-hidden md:overflow-visible">
         <div className="container max-w-6xl px-4 md:px-4 relative z-10">
@@ -56,7 +56,7 @@ const AppShowcase = () => {
             <div
               key={item.title}
               className={`relative flex flex-col ${item.imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
-                } items-center gap-6 lg:gap-12 mb-12 lg:mb-20 last:mb-0 animate-fade-up md:last:mb-0`}
+                } items-center gap-6 lg:gap-20 mb-12 lg:mb-28 last:mb-0 animate-fade-up md:last:mb-0`}
               style={{
                 animationDelay: `${index * 0.2}s`,
                 paddingBottom: index === showcaseItems.length - 1 ? '160px' : '60px', // Espaço para o último celular no mobile
