@@ -6,8 +6,11 @@ import AppShowcase from "@/components/landing/AppShowcase";
 import Testimonials from "@/components/landing/Testimonials";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 const Index = () => {
-  return <main className="min-h-screen">
+  return (
+    <main className="min-h-screen">
       <Header />
       <Hero />
       <Features />
@@ -16,6 +19,9 @@ const Index = () => {
       <Testimonials />
       <CTA />
       <Footer />
-    </main>;
+      <WhatsAppButton />
+    </main>
+  );
 };
+
 export default Index;
