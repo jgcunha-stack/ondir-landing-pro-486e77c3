@@ -34,7 +34,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="relative py-12 md:py-32 lg:py-40 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
+    <section id="how-it-works" className="relative py-12 md:py-20 lg:py-24 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
