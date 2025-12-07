@@ -27,8 +27,8 @@ const CTA = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-brand-600/30" />
           </div>
 
-          <div className="relative z-10 py-8 md:py-12 px-4 md:px-12">
-            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
+          <div className="relative z-10 py-6 md:py-12 px-4 md:px-12">
+            <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-start">
               {/* Left side - Content */}
               <div className="text-center lg:text-left animate-fade-up">
                 <p className="text-brand-200 text-xs md:text-sm font-medium mb-2 md:mb-4">
@@ -39,7 +39,7 @@ const CTA = () => {
                   Baixe o App – É Grátis!
                 </h2>
 
-                <p className="text-brand-100 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
+                <p className="text-brand-100 text-sm md:text-lg mb-4 md:mb-8 max-w-xl mx-auto lg:mx-0">
                   Descubra os melhores lugares, ganhe pontos e troque por cupons de desconto gratuitos.
                 </p>
 
@@ -73,8 +73,8 @@ const CTA = () => {
 
               {/* Right side - Phone Mockup (cut by overflow-hidden) */}
               <div className="relative flex justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                {/* Main phone - extends beyond card and gets cut */}
-                <div className="relative z-10 w-[260px] sm:w-[240px] md:w-[340px] translate-y-16 md:translate-y-24">
+                {/* Main phone - bigger and extends more */}
+                <div className="relative z-10 w-[320px] sm:w-[240px] md:w-[340px] translate-y-8 md:translate-y-24">
                   <img
                     src={appMockup}
                     alt="Ondir App"
