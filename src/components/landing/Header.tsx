@@ -53,11 +53,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
       <div
-        className={`container max-w-5xl mx-auto transition-all duration-300 rounded-full px-4 md:px-6 py-3 border ${
-          isScrolled
-            ? "bg-white/90 backdrop-blur-xl shadow-lg border-white/50"
-            : "bg-white/20 backdrop-blur-md border-white/30"
-        }`}
+        className={`container max-w-5xl mx-auto transition-all duration-300 rounded-full px-4 md:px-6 py-3 border ${isScrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-lg border-white/50"
+          : "bg-white/20 backdrop-blur-md border-white/30"
+          }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -78,15 +77,14 @@ const Header = () => {
                     target.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className={`text-sm font-medium transition-colors cursor-pointer ${
-                  isScrolled
-                    ? isActive(link.href)
-                      ? "text-brand-600"
-                      : "text-gray-600 hover:text-brand-600"
-                    : isActive(link.href)
-                      ? "text-white"
-                      : "text-white/70 hover:text-white"
-                }`}
+                className={`text-sm font-medium transition-colors cursor-pointer ${isScrolled
+                  ? isActive(link.href)
+                    ? "text-brand-600"
+                    : "text-gray-600 hover:text-brand-600"
+                  : isActive(link.href)
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
+                  }`}
               >
                 {link.label}
               </a>
@@ -95,13 +93,19 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className={`rounded-full px-6 shadow-md transition-all duration-300 ${
-              isScrolled 
+            <a
+              href="http://lnkz.app/jlov"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button className={`rounded-full px-6 shadow-md transition-all duration-300 ${isScrolled
                 ? "bg-brand-500 hover:bg-brand-600 text-white shadow-brand-500/20"
                 : "bg-white text-brand-500 hover:bg-white/90 shadow-white/20"
-            }`}>
-              Baixar App
-            </Button>
+                }`}>
+                Baixar App
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,11 +126,10 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors py-2 px-3 rounded-lg ${
-                  isActive(link.href)
-                    ? "text-brand-600 bg-brand-50"
-                    : "text-gray-600 hover:text-brand-600 hover:bg-brand-50"
-                }`}
+                className={`text-sm font-medium transition-colors py-2 px-3 rounded-lg ${isActive(link.href)
+                  ? "text-brand-600 bg-brand-50"
+                  : "text-gray-600 hover:text-brand-600 hover:bg-brand-50"
+                  }`}
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMobileMenuOpen(false);
@@ -140,9 +143,16 @@ const Header = () => {
               </a>
             ))}
             <div className="pt-3 mt-2 border-t border-brand-100">
-              <Button className="w-full bg-brand-500 hover:bg-brand-600 text-white rounded-full">
-                Baixar App
-              </Button>
+              <a
+                href="http://lnkz.app/jlov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full"
+              >
+                <Button className="w-full bg-brand-500 hover:bg-brand-600 text-white rounded-full">
+                  Baixar App
+                </Button>
+              </a>
             </div>
           </nav>
         </div>

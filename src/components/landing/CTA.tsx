@@ -61,7 +61,9 @@ const CTA = () => {
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
                   {/* Google Play Button */}
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                   >
                     <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
@@ -73,7 +75,9 @@ const CTA = () => {
 
                   {/* App Store Button */}
                   <a
-                    href="#"
+                    href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                   >
                     <Apple className="w-6 h-6 md:w-8 md:h-8" />
@@ -156,7 +160,9 @@ const CTA = () => {
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
                   {/* Google Play Button */}
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                   >
                     <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
@@ -168,7 +174,9 @@ const CTA = () => {
 
                   {/* App Store Button */}
                   <a
-                    href="#"
+                    href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
                   >
                     <Apple className="w-6 h-6 md:w-8 md:h-8" />

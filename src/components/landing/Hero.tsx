@@ -8,15 +8,15 @@ const Hero = () => {
     <section className="relative h-[100vh] md:min-h-[130vh] lg:min-h-[125vh] overflow-hidden rounded-b-[3rem] md:rounded-b-[4rem]">
       {/* Blue Background with Concentric Circles */}
       <div className="absolute inset-0 rounded-b-[3rem] md:rounded-b-[4rem] overflow-hidden">
-        <img 
-          src={heroBg} 
-          alt="" 
+        <img
+          src={heroBg}
+          alt=""
           className="w-full h-full object-cover"
         />
         {/* Additional subtle overlays for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-600/20" />
       </div>
-      
+
       {/* Animated floating elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[20%] right-[10%] w-3 h-3 bg-white/30 rounded-full animate-pulse-soft" />
@@ -46,23 +46,37 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up px-4" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 px-6 md:px-8 text-sm md:text-base">
-              <Apple className="w-4 h-4 md:w-5 md:h-5" />
-              App Store
-            </Button>
-            <Button variant="outline" size="lg" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 px-6 md:px-8 text-sm md:text-base">
-              <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
-              Google Play
-            </Button>
+            <a
+              href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button size="lg" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1">
+                <Apple className="w-4 h-4 md:w-5 md:h-5" />
+                App Store
+              </Button>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button variant="outline" size="lg" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1">
+                <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
+                Google Play
+              </Button>
+            </a>
           </div>
         </div>
 
         {/* Phone Mockup Section with Floating Cards */}
         <div className="relative flex justify-center animate-fade-up mt-6 md:mt-10" style={{ animationDelay: "0.4s" }}>
           <div className="relative max-w-[900px] w-full flex justify-center">
-            
+
             {/* Floating Notification Cards - Left Side - Hidden on mobile */}
-            
+
             {/* Card 1 - Points/Rewards */}
             <div className="hidden md:block absolute left-[5%] lg:left-[8%] top-[5%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300 max-w-[200px]" style={{ animationDelay: "0.8s" }}>
               <div className="flex items-center gap-3">
@@ -103,7 +117,7 @@ const Hero = () => {
             </div>
 
             {/* Floating Notification Cards - Right Side - Hidden on mobile */}
-            
+
             {/* Card 4 - Reservation */}
             <div className="hidden md:block absolute right-[5%] lg:right-[8%] top-[8%] bg-white rounded-2xl p-4 shadow-xl shadow-brand-500/10 animate-notification-pop z-20 border border-brand-100/50 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
               <div className="flex items-center gap-3">

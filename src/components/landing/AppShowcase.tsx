@@ -87,18 +87,32 @@ const AppShowcase = () => {
 
                 {index === 0 && (
                   <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center lg:justify-start">
-                    <Button size="default" className="gap-2 shadow-lg shadow-brand-500/30 text-sm">
-                      <Apple className="w-4 h-4 md:w-5 md:h-5" />
-                      App Store
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="default"
-                      className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50 text-sm"
+                    <a
+                      href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
                     >
-                      <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
-                      Google Play
-                    </Button>
+                      <Button size="default" className="gap-2 shadow-lg shadow-brand-500/30 text-sm">
+                        <Apple className="w-4 h-4 md:w-5 md:h-5" />
+                        App Store
+                      </Button>
+                    </a>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Button
+                        variant="outline"
+                        size="default"
+                        className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50 text-sm"
+                      >
+                        <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
+                        Google Play
+                      </Button>
+                    </a>
                   </div>
                 )}
               </div>
