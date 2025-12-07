@@ -34,7 +34,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
+    <section id="how-it-works" className="relative py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white via-blue-50 to-blue-500 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-brand-100/30 rounded-full blur-3xl animate-pulse-soft" />
@@ -43,16 +43,16 @@ const HowItWorks = () => {
 
       {/* Container com overflow-hidden para cortar o celular no mobile */}
       <div className="relative overflow-hidden md:overflow-visible">
-        <div className="container relative z-10 px-6 md:px-4">
+        <div className="container relative z-10 px-4 md:px-4">
           {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16 animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-3 md:mb-4">
+          <div className="text-center max-w-2xl mx-auto mb-6 md:mb-16 animate-fade-up">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-brand-100 rounded-full text-brand-600 text-xs md:text-sm font-semibold mb-2 md:mb-4">
               Como Funciona
             </span>
-            <h2 className="text-5xl sm:text-6xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-4">
               Comece em <span className="text-brand-500">4 passos</span>
             </h2>
-            <p className="text-gray-600 text-base md:text-lg px-4">
+            <p className="text-gray-600 text-sm md:text-lg">
               É simples, rápido e gratuito. Em poucos minutos você estará ganhando recompensas.
             </p>
           </div>
@@ -115,7 +115,7 @@ const HowItWorks = () => {
             </div>
 
             {/* Timeline Steps */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-4 md:space-y-6">
               {steps.map((step, index) => (
                 <div
                   key={step.step}

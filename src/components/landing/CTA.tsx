@@ -13,7 +13,7 @@ const CTA = () => {
         <div className="h-1/2 bg-gray-900" />
       </div>
 
-      <div className="container relative z-10 py-2 md:py-6 px-6 md:px-4">
+      <div className="container relative z-10 py-2 md:py-6 px-4 md:px-4">
         {/* Card with overflow hidden to cut the phone */}
         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden max-w-md md:max-w-none mx-auto">
           {/* Background with hero image */}
@@ -49,7 +49,7 @@ const CTA = () => {
                   Seu destino para descobertas incríveis
                 </p>
 
-                <h2 className="text-5xl sm:text-6xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 leading-tight">
                   Baixe o App – É Grátis!
                 </h2>
 
