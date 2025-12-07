@@ -48,7 +48,7 @@ const showcaseItems = [
 
 const AppShowcase = () => {
   return (
-    <section id="app-showcase" className="relative py-12 md:py-32 lg:py-40 bg-background overflow-hidden">
+    <section id="app-showcase" className="relative py-12 md:py-20 lg:py-24 bg-background overflow-hidden">
       {/* Container com overflow-hidden para cortar o celular no mobile */}
       <div className="relative overflow-hidden md:overflow-visible">
         <div className="container max-w-6xl px-4 md:px-4 relative z-10">

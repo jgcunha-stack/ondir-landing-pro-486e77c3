@@ -39,7 +39,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-foreground pt-10 md:pt-20 pb-6 md:pb-10 overflow-hidden">
+    <footer id="contact" className="bg-foreground pt-10 md:pt-16 pb-6 md:pb-8 overflow-hidden">
       <div className="container px-4 md:px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-16 mb-8 md:mb-16">
           {/* Brand */}
