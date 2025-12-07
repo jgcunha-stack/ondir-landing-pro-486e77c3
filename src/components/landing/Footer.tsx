@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoBlue from "@/assets/logo-blue.png";
 
@@ -20,10 +20,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/ondirbr", label: "Instagram" },
+  { icon: Facebook, href: "https://facebook.com/ondirbr", label: "Facebook" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/ondir/about/?viewAsMember=true", label: "LinkedIn" },
 ];
 
 const Footer = () => {
@@ -39,22 +38,22 @@ const Footer = () => {
             </p>
             <div className="space-y-2 md:space-y-3">
               <a
-                href="mailto:contato@ondir.com.br"
+                href="mailto:pedronovais@ondirbr.com"
                 className="flex items-center gap-2 md:gap-3 text-gray-400 hover:text-primary-foreground transition-colors text-sm md:text-base"
               >
                 <Mail className="w-4 h-4 md:w-5 md:h-5" />
-                contato@ondir.com.br
+                pedronovais@ondirbr.com
               </a>
               <a
-                href="tel:+5511999999999"
+                href="tel:+5531991931283"
                 className="flex items-center gap-2 md:gap-3 text-gray-400 hover:text-primary-foreground transition-colors text-sm md:text-base"
               >
                 <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                (11) 99999-9999
+                31 99193-1283
               </a>
               <div className="flex items-center gap-2 md:gap-3 text-gray-400 text-sm md:text-base">
                 <MapPin className="w-4 h-4 md:w-5 md:h-5" />
-                São Paulo, Brasil
+                Belo Horizonte, MG
               </div>
             </div>
           </div>

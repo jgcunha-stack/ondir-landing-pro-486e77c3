@@ -46,24 +46,92 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up px-4" style={{ animationDelay: "0.3s" }}>
+            {/* App Store Button - Mobile */}
             <a
               href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="inline-block md:hidden"
             >
-              <Button size="xl" className="gap-2 md:gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 md:h-14 md:px-8 md:text-base md:rounded-xl">
+              <Button
+                size="xl"
+                className="gap-2 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  height: '56px', // Controle em pixels - altura do botão (MOBILE)
+                  paddingLeft: '32px', // Controle em pixels - padding esquerdo (MOBILE)
+                  paddingRight: '150px', // Controle em pixels - padding direito (MOBILE)
+                  fontSize: '16px', // Controle em pixels - tamanho da fonte (MOBILE)
+                  borderRadius: '12px' // Controle em pixels - borda arredondada (MOBILE)
+                }}
+              >
                 <Apple className="w-5 h-5" />
                 App Store
               </Button>
             </a>
+            {/* App Store Button - Desktop */}
+            <a
+              href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hidden md:inline-block"
+            >
+              <Button
+                size="xl"
+                className="gap-3 bg-white text-brand-600 hover:bg-white/90 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                  paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                  paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                  fontSize: '16px', // Controle em pixels - tamanho da fonte (DESKTOP)
+                  borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                }}
+              >
+                <Apple className="w-5 h-5" />
+                App Store
+              </Button>
+            </a>
+            {/* Google Play Button - Mobile */}
             <a
               href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="inline-block md:hidden"
             >
-              <Button variant="outline" size="xl" className="gap-2 md:gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1 md:h-14 md:px-8 md:text-base md:rounded-xl">
+              <Button
+                variant="outline"
+                size="xl"
+                className="gap-2 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  height: '56px', // Controle em pixels - altura do botão (MOBILE)
+                  paddingLeft: '32px', // Controle em pixels - padding esquerdo (MOBILE)
+                  paddingRight: '130px', // Controle em pixels - padding direito (MOBILE)
+                  fontSize: '16px', // Controle em pixels - tamanho da fonte (MOBILE)
+                  borderRadius: '12px' // Controle em pixels - borda arredondada (MOBILE)
+                }}
+              >
+                <PlayCircle className="w-5 h-5" />
+                Google Play
+              </Button>
+            </a>
+            {/* Google Play Button - Desktop */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hidden md:inline-block"
+            >
+              <Button
+                variant="outline"
+                size="xl"
+                className="gap-3 border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                  paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                  paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                  fontSize: '16px', // Controle em pixels - tamanho da fonte (DESKTOP)
+                  borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                }}
+              >
                 <PlayCircle className="w-5 h-5" />
                 Google Play
               </Button>

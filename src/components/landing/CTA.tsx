@@ -59,31 +59,81 @@ const CTA = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                  {/* Google Play Button */}
+                  {/* Google Play Button - Mobile */}
                   <a
                     href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg md:hidden"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (MOBILE)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (MOBILE)
+                      paddingRight: '150px', // Controle em pixels - padding direito (MOBILE)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (MOBILE)
+                    }}
                   >
-                    <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
+                    <PlayCircle className="w-5 h-5" />
                     <div className="text-left">
-                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
-                      <span className="block text-base md:text-lg font-semibold -mt-0.5">Google Play</span>
+                      <span className="block text-[9px] uppercase tracking-wide opacity-80">Disponível no</span>
+                      <span className="block text-base font-semibold -mt-0.5">Google Play</span>
+                    </div>
+                  </a>
+                  {/* Google Play Button - Desktop */}
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg hidden md:inline-flex"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                      paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                    }}
+                  >
+                    <PlayCircle className="w-5 h-5" />
+                    <div className="text-left">
+                      <span className="block text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
+                      <span className="block text-lg font-semibold -mt-0.5">Google Play</span>
                     </div>
                   </a>
 
-                  {/* App Store Button */}
+                  {/* App Store Button - Mobile */}
                   <a
                     href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg md:hidden"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (MOBILE)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (MOBILE)
+                      paddingRight: '150px', // Controle em pixels - padding direito (MOBILE)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (MOBILE)
+                    }}
                   >
-                    <Apple className="w-6 h-6 md:w-8 md:h-8" />
+                    <Apple className="w-5 h-5" />
                     <div className="text-left">
-                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
-                      <span className="block text-base md:text-lg font-semibold -mt-0.5">App Store</span>
+                      <span className="block text-[9px] uppercase tracking-wide opacity-80">Baixar na</span>
+                      <span className="block text-base font-semibold -mt-0.5">App Store</span>
+                    </div>
+                  </a>
+                  {/* App Store Button - Desktop */}
+                  <a
+                    href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg hidden md:inline-flex"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                      paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                    }}
+                  >
+                    <Apple className="w-5 h-5" />
+                    <div className="text-left">
+                      <span className="block text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
+                      <span className="block text-lg font-semibold -mt-0.5">App Store</span>
                     </div>
                   </a>
                 </div>
@@ -158,31 +208,43 @@ const CTA = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                  {/* Google Play Button */}
+                  {/* Google Play Button - Desktop */}
                   <a
                     href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                      paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                    }}
                   >
-                    <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
+                    <PlayCircle className="w-5 h-5" />
                     <div className="text-left">
-                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
-                      <span className="block text-base md:text-lg font-semibold -mt-0.5">Google Play</span>
+                      <span className="block text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
+                      <span className="block text-lg font-semibold -mt-0.5">Google Play</span>
                     </div>
                   </a>
 
-                  {/* App Store Button */}
+                  {/* App Store Button - Desktop */}
                   <a
                     href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                    style={{
+                      height: '56px', // Controle em pixels - altura do botão (DESKTOP)
+                      paddingLeft: '32px', // Controle em pixels - padding esquerdo (DESKTOP)
+                      paddingRight: '32px', // Controle em pixels - padding direito (DESKTOP)
+                      borderRadius: '12px' // Controle em pixels - borda arredondada (DESKTOP)
+                    }}
                   >
-                    <Apple className="w-6 h-6 md:w-8 md:h-8" />
+                    <Apple className="w-5 h-5" />
                     <div className="text-left">
-                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
-                      <span className="block text-base md:text-lg font-semibold -mt-0.5">App Store</span>
+                      <span className="block text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
+                      <span className="block text-lg font-semibold -mt-0.5">App Store</span>
                     </div>
                   </a>
                 </div>

@@ -36,13 +36,13 @@ const Privacidade = () => {
               A Ondir Tecnologia da Informação LTDA, localizada na Rua Planura, 136, Santa Inês, Belo Horizonte, MG, CEP 31080-100, é a controladora dos dados pessoais tratados no aplicativo Ondir.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Caso tenha dúvidas sobre esta Política, entre em contato pelo e-mail <a href="mailto:privacidade@ondir.com" className="text-brand-600 hover:underline">privacidade@ondir.com</a>.
+              Caso tenha dúvidas sobre esta Política, entre em contato pelo e-mail <a href="mailto:pedronovais@ondirbr.com" className="text-brand-600 hover:underline">pedronovais@ondirbr.com</a>.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4">2. Informações que Coletamos</h2>
-            
+
             <h3 className="text-lg font-semibold text-gray-800 mb-2">2.1 Dados Pessoais Fornecidos pelo Usuário:</h3>
             <ul className="list-disc list-inside text-gray-600 mb-4 space-y-1">
               <li>Nome completo.</li>
@@ -115,7 +115,7 @@ const Privacidade = () => {
               <li><strong>Oposição:</strong> Opor-se ao tratamento de dados com base em legítimo interesse.</li>
             </ul>
             <p className="text-gray-600 leading-relaxed">
-              Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:privacidade@ondir.com" className="text-brand-600 hover:underline">privacidade@ondir.com</a>.
+              Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:pedronovais@ondirbr.com" className="text-brand-600 hover:underline">pedronovais@ondirbr.com</a>.
             </p>
           </section>
 
@@ -155,7 +155,7 @@ const Privacidade = () => {
             </p>
             <ul className="text-gray-600 space-y-1">
               <li><strong>Nome:</strong> Pedro Henrique Dias Novais Teixeira</li>
-              <li><strong>E-mail:</strong> <a href="mailto:privacidade@ondir.com" className="text-brand-600 hover:underline">privacidade@ondir.com</a></li>
+              <li><strong>E-mail:</strong> <a href="mailto:pedronovais@ondirbr.com" className="text-brand-600 hover:underline">pedronovais@ondirbr.com</a></li>
             </ul>
           </section>
 
@@ -165,7 +165,7 @@ const Privacidade = () => {
               Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade, entre em contato conosco:
             </p>
             <p className="text-gray-600 mt-2">
-              <strong>E-mail:</strong> <a href="mailto:privacidade@ondir.com" className="text-brand-600 hover:underline">privacidade@ondir.com</a>
+              <strong>E-mail:</strong> <a href="mailto:pedronovais@ondirbr.com" className="text-brand-600 hover:underline">pedronovais@ondirbr.com</a>
             </p>
           </section>
         </article>

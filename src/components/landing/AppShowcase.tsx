@@ -87,29 +87,93 @@ const AppShowcase = () => {
 
                 {index === 0 && (
                   <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center lg:justify-start">
+                    {/* App Store Button - Mobile */}
                     <a
                       href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block"
+                      className="inline-block md:hidden"
                     >
-                      <Button size="default" className="gap-2 shadow-lg shadow-brand-500/30 text-sm">
-                        <Apple className="w-4 h-4 md:w-5 md:h-5" />
+                      <Button
+                        size="default"
+                        className="gap-2 shadow-lg shadow-brand-500/30"
+                        style={{
+                          height: '44px', // Controle em pixels - altura do botão (MOBILE)
+                          paddingLeft: '24px', // Controle em pixels - padding esquerdo (MOBILE)
+                          paddingRight: '150px', // Controle em pixels - padding direito (MOBILE)
+                          fontSize: '14px', // Controle em pixels - tamanho da fonte (MOBILE)
+                          borderRadius: '8px' // Controle em pixels - borda arredondada (MOBILE)
+                        }}
+                      >
+                        <Apple className="w-4 h-4" />
                         App Store
                       </Button>
                     </a>
+                    {/* App Store Button - Desktop */}
+                    <a
+                      href="https://apps.apple.com/br/app/ondir-descubra-onde-ir/id6749873726"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block hidden md:inline-block"
+                    >
+                      <Button
+                        size="default"
+                        className="gap-2 shadow-lg shadow-brand-500/30"
+                        style={{
+                          height: '44px', // Controle em pixels - altura do botão (DESKTOP)
+                          paddingLeft: '24px', // Controle em pixels - padding esquerdo (DESKTOP)
+                          paddingRight: '24px', // Controle em pixels - padding direito (DESKTOP)
+                          fontSize: '14px', // Controle em pixels - tamanho da fonte (DESKTOP)
+                          borderRadius: '8px' // Controle em pixels - borda arredondada (DESKTOP)
+                        }}
+                      >
+                        <Apple className="w-5 h-5" />
+                        App Store
+                      </Button>
+                    </a>
+                    {/* Google Play Button - Mobile */}
                     <a
                       href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block"
+                      className="inline-block md:hidden"
                     >
                       <Button
                         variant="outline"
                         size="default"
-                        className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50 text-sm"
+                        className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50"
+                        style={{
+                          height: '44px', // Controle em pixels - altura do botão (MOBILE)
+                          paddingLeft: '24px', // Controle em pixels - padding esquerdo (MOBILE)
+                          paddingRight: '130px', // Controle em pixels - padding direito (MOBILE)
+                          fontSize: '14px', // Controle em pixels - tamanho da fonte (MOBILE)
+                          borderRadius: '8px' // Controle em pixels - borda arredondada (MOBILE)
+                        }}
                       >
-                        <PlayCircle className="w-4 h-4 md:w-5 md:h-5" />
+                        <PlayCircle className="w-4 h-4" />
+                        Google Play
+                      </Button>
+                    </a>
+                    {/* Google Play Button - Desktop */}
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.ondirbr.ondir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block hidden md:inline-block"
+                    >
+                      <Button
+                        variant="outline"
+                        size="default"
+                        className="gap-2 border-2 border-brand-200 text-brand-700 hover:bg-brand-50"
+                        style={{
+                          height: '44px', // Controle em pixels - altura do botão (DESKTOP)
+                          paddingLeft: '24px', // Controle em pixels - padding esquerdo (DESKTOP)
+                          paddingRight: '24px', // Controle em pixels - padding direito (DESKTOP)
+                          fontSize: '14px', // Controle em pixels - tamanho da fonte (DESKTOP)
+                          borderRadius: '8px' // Controle em pixels - borda arredondada (DESKTOP)
+                        }}
+                      >
+                        <PlayCircle className="w-5 h-5" />
                         Google Play
                       </Button>
                     </a>
