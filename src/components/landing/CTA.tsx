@@ -13,10 +13,11 @@ const CTA = () => {
         <div className="h-1/2 bg-gray-900" />
       </div>
 
-      <div className="container relative z-10 pt-32 md:pt-48 pb-6 md:pb-12 px-4">
-        <div className="relative rounded-2xl md:rounded-3xl py-6 md:py-12 px-4 md:px-12">
+      <div className="container relative z-10 py-6 md:py-12 px-4">
+        {/* Card with overflow hidden to cut the phone */}
+        <div className="relative rounded-2xl md:rounded-3xl overflow-hidden">
           {/* Background with hero image */}
-          <div className="absolute inset-0 rounded-2xl md:rounded-3xl overflow-hidden">
+          <div className="absolute inset-0">
             <img 
               src={heroBg} 
               alt="" 
@@ -26,59 +27,63 @@ const CTA = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-brand-600/30" />
           </div>
 
-          <div className="relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-            {/* Left side - Content */}
-            <div className="text-center lg:text-left animate-fade-up">
-              <p className="text-brand-200 text-xs md:text-sm font-medium mb-2 md:mb-4">
-                Seu destino para descobertas incríveis
-              </p>
+          <div className="relative z-10 py-8 md:py-12 px-4 md:px-12">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
+              {/* Left side - Content */}
+              <div className="text-center lg:text-left animate-fade-up">
+                <p className="text-brand-200 text-xs md:text-sm font-medium mb-2 md:mb-4">
+                  Seu destino para descobertas incríveis
+                </p>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 leading-tight">
-                Baixe o App – É Grátis!
-              </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 leading-tight">
+                  Baixe o App – É Grátis!
+                </h2>
 
-              <p className="text-brand-100 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
-                Descubra os melhores lugares, ganhe pontos e troque por cupons de desconto gratuitos.
-              </p>
+                <p className="text-brand-100 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
+                  Descubra os melhores lugares, ganhe pontos e troque por cupons de desconto gratuitos.
+                </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                {/* Google Play Button */}
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
-                >
-                  <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
-                  <div className="text-left">
-                    <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
-                    <span className="block text-base md:text-lg font-semibold -mt-0.5">Google Play</span>
-                  </div>
-                </a>
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.1s" }}>
+                  {/* Google Play Button */}
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                  >
+                    <PlayCircle className="w-6 h-6 md:w-8 md:h-8" />
+                    <div className="text-left">
+                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Disponível no</span>
+                      <span className="block text-base md:text-lg font-semibold -mt-0.5">Google Play</span>
+                    </div>
+                  </a>
 
-                {/* App Store Button */}
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
-                >
-                  <Apple className="w-6 h-6 md:w-8 md:h-8" />
-                  <div className="text-left">
-                    <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
-                    <span className="block text-base md:text-lg font-semibold -mt-0.5">App Store</span>
-                  </div>
-                </a>
+                  {/* App Store Button */}
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 bg-gray-900 hover:bg-gray-800 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+                  >
+                    <Apple className="w-6 h-6 md:w-8 md:h-8" />
+                    <div className="text-left">
+                      <span className="block text-[9px] md:text-[10px] uppercase tracking-wide opacity-80">Baixar na</span>
+                      <span className="block text-base md:text-lg font-semibold -mt-0.5">App Store</span>
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* Right side - Phone Mockups */}
-            <div className="relative flex justify-center items-end mt-8 md:-mt-56 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              {/* Glow effect behind phones */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[300px] md:w-[550px] h-[300px] md:h-[550px] bg-white/20 rounded-full blur-[80px] animate-pulse-soft" />
-              </div>
-              
-              <div className="relative flex items-end justify-center">
-                {/* Back phone - left */}
-                <div className="absolute -left-8 md:-left-32 bottom-0 w-[120px] md:w-[260px] transform -rotate-6 hidden sm:block">
+              {/* Right side - Phone Mockup (cut by overflow-hidden) */}
+              <div className="relative flex justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
+                {/* Main phone - extends beyond card and gets cut */}
+                <div className="relative z-10 w-[260px] sm:w-[240px] md:w-[340px] translate-y-16 md:translate-y-24">
+                  <img
+                    src={appMockup}
+                    alt="Ondir App"
+                    className="w-full drop-shadow-2xl rounded-[2rem]"
+                  />
+                </div>
+
+                {/* Back phone - left - desktop only */}
+                <div className="absolute -left-8 md:-left-20 top-24 md:top-32 w-[140px] md:w-[240px] transform -rotate-6 hidden sm:block z-0">
                   <img
                     src={appClube}
                     alt="Ondir App - Clube"
@@ -86,17 +91,8 @@ const CTA = () => {
                   />
                 </div>
 
-                {/* Main phone - center - bigger on mobile */}
-                <div className="relative z-10 w-[280px] sm:w-[220px] md:w-[340px] translate-y-20 sm:translate-y-0">
-                  <img
-                    src={appMockup}
-                    alt="Ondir App"
-                    className="w-full drop-shadow-2xl rounded-[2rem] md:rounded-[2rem]"
-                  />
-                </div>
-
-                {/* Back phone - right */}
-                <div className="absolute -right-8 md:-right-32 bottom-0 w-[120px] md:w-[260px] transform rotate-6 hidden sm:block">
+                {/* Back phone - right - desktop only */}
+                <div className="absolute -right-8 md:-right-20 top-24 md:top-32 w-[140px] md:w-[240px] transform rotate-6 hidden sm:block z-0">
                   <img
                     src={appPesquisa}
                     alt="Ondir App - Pesquisa"
